@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICE Model Conversion Strategy</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#1981ED',secondary:'#4B5563'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            background-color: #111827;
+            color: #e5e7eb;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="bg-gray-900 border-b border-gray-800">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <a href="https://readdy.ai/home/2a7a8cfb-9728-47a4-a357-766fd0ecc5c9/3684a90d-9f4f-4459-acf6-b9c6f99b8615" data-readdy="true" class="text-primary flex items-center gap-2 mr-8">
+                            <div class="w-6 h-6 flex items-center justify-center">
+                                <i class="ri-arrow-left-line"></i>
+                            </div>
+                            <span>Back to Strategic Priorities</span>
+                        </a>
+                        <nav class="hidden md:flex">
+                            <ol class="flex items-center text-sm text-gray-400">
+                                <li class="flex items-center">
+                                    <a href="#" class="hover:text-primary">Strategy</a>
+                                    <div class="w-4 h-4 flex items-center justify-center mx-1">
+                                        <i class="ri-arrow-right-s-line text-gray-600"></i>
+                                    </div>
+                                </li>
+                                <li class="flex items-center">
+                                    <a href="https://readdy.ai/home/2a7a8cfb-9728-47a4-a357-766fd0ecc5c9/3684a90d-9f4f-4459-acf6-b9c6f99b8615" data-readdy="true" class="hover:text-primary">Strategic Priorities</a>
+                                    <div class="w-4 h-4 flex items-center justify-center mx-1">
+                                        <i class="ri-arrow-right-s-line text-gray-600"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="text-white">ICE Model Conversion</span>
+                                </li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="bg-amber-600/20 text-amber-400 px-3 py-1 rounded-full text-xs font-medium">In Progress</span>
+                        <div class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center">
+                            <div class="w-6 h-6 flex items-center justify-center">
+                                <i class="ri-user-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 container mx-auto px-6 py-8">
+            <div class="flex flex-col gap-8">
+                <!-- Page Title -->
+                <div class="flex flex-col gap-2">
+                    <h1 class="text-3xl font-bold text-white">ICE Model Conversion Strategy</h1>
+                    <p class="text-gray-400">Transforming our existing Internal Combustion Engine models to electric variants</p>
+                </div>
+
+                <!-- Executive Summary -->
+                <section class="bg-gray-800 rounded p-6">
+                    <h2 class="text-xl font-semibold text-white mb-4">Executive Summary</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="col-span-2">
+                            <p class="text-gray-300 mb-4">
+                                Our ICE Model Conversion initiative aims to transition our existing Internal Combustion Engine (ICE) vehicle lineup to electric variants while maintaining market share and optimizing production costs. This strategic initiative aligns with global sustainability goals and positions us to meet evolving consumer preferences and regulatory requirements.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                                <div class="bg-gray-700/50 p-4 rounded">
+                                    <h3 class="text-white font-medium mb-2">Key Objectives</h3>
+                                    <ul class="text-gray-300 space-y-2">
+                                        <li class="flex items-start">
+                                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                                <i class="ri-check-line"></i>
+                                            </div>
+                                            <span>Reduce carbon footprint by 40% by 2027</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                                <i class="ri-check-line"></i>
+                                            </div>
+                                            <span>Maintain 85% of existing market share during transition</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                                <i class="ri-check-line"></i>
+                                            </div>
+                                            <span>Optimize production costs through platform sharing</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-700/50 p-4 rounded">
+                                    <h3 class="text-white font-medium mb-2">Target Metrics</h3>
+                                    <ul class="text-gray-300 space-y-2">
+                                        <li class="flex items-start">
+                                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                                <i class="ri-target-line"></i>
+                                            </div>
+                                            <span>Convert 60% of ICE models to electric by 2025</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                                <i class="ri-funds-line"></i>
+                                            </div>
+                                            <span>$2.5B investment over 3 years</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                                <i class="ri-recycle-line"></i>
+                                            </div>
+                                            <span>20% reduction in manufacturing waste</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-700/30 rounded p-4">
+                            <h3 class="text-white font-medium mb-3">Conversion Progress</h3>
+                            <div class="relative pt-1">
+                                <div class="flex mb-2 items-center justify-between">
+                                    <div>
+                                        <span class="text-xs font-semibold inline-block text-primary">
+                                            27% Complete
+                                        </span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-xs font-semibold inline-block text-gray-400">
+                                            Target: 60%
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-700">
+                                    <div style="width:27%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-primary"></div>
+                                </div>
+                            </div>
+                            <div class="space-y-3 mt-4">
+                                <div>
+                                    <div class="flex justify-between text-xs mb-1">
+                                        <span class="text-gray-300">R&D Phase</span>
+                                        <span class="text-green-400">Completed</span>
+                                    </div>
+                                    <div class="overflow-hidden h-1.5 text-xs flex rounded bg-gray-700">
+                                        <div style="width:100%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs mb-1">
+                                        <span class="text-gray-300">Platform Development</span>
+                                        <span class="text-amber-400">In Progress</span>
+                                    </div>
+                                    <div class="overflow-hidden h-1.5 text-xs flex rounded bg-gray-700">
+                                        <div style="width:65%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-amber-500"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs mb-1">
+                                        <span class="text-gray-300">Production Line Modification</span>
+                                        <span class="text-amber-400">In Progress</span>
+                                    </div>
+                                    <div class="overflow-hidden h-1.5 text-xs flex rounded bg-gray-700">
+                                        <div style="width:40%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-amber-500"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs mb-1">
+                                        <span class="text-gray-300">Testing & Validation</span>
+                                        <span class="text-gray-400">Not Started</span>
+                                    </div>
+                                    <div class="overflow-hidden h-1.5 text-xs flex rounded bg-gray-700">
+                                        <div style="width:0%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-primary"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs mb-1">
+                                        <span class="text-gray-300">Market Launch</span>
+                                        <span class="text-gray-400">Not Started</span>
+                                    </div>
+                                    <div class="overflow-hidden h-1.5 text-xs flex rounded bg-gray-700">
+                                        <div style="width:0%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-primary"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Market Analysis -->
+                <section class="bg-gray-800 rounded p-6">
+                    <h2 class="text-xl font-semibold text-white mb-4">Market Analysis</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="col-span-2">
+                            <p class="text-gray-300 mb-4">
+                                Our comprehensive market analysis shows a significant shift in consumer preferences towards electric vehicles, driven by environmental concerns, government incentives, and improved EV technology. This transition presents both challenges and opportunities for our ICE model conversion strategy.
+                            </p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                                <div class="bg-gray-700/50 p-4 rounded">
+                                    <h3 class="text-white font-medium mb-2">Consumer Sentiment</h3>
+                                    <ul class="text-gray-300 space-y-2">
+                                        <li class="flex items-start">
+                                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                                <i class="ri-arrow-up-line"></i>
+                                            </div>
+                                            <span>68% of current customers express interest in EV options</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                                <i class="ri-arrow-up-line"></i>
+                                            </div>
+                                            <span>42% willing to pay premium for electric variants of familiar models</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-red-400">
+                                                <i class="ri-arrow-down-line"></i>
+                                            </div>
+                                            <span>Range anxiety remains top concern (64% of respondents)</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-700/50 p-4 rounded">
+                                    <h3 class="text-white font-medium mb-2">Regulatory Landscape</h3>
+                                    <ul class="text-gray-300 space-y-2">
+                                        <li class="flex items-start">
+                                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                                <i class="ri-government-line"></i>
+                                            </div>
+                                            <span>EU mandating 55% emissions reduction by 2030</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                                <i class="ri-government-line"></i>
+                                            </div>
+                                            <span>15 countries announced ICE sales bans between 2030-2040</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                                <i class="ri-coins-line"></i>
+                                            </div>
+                                            <span>$7,500 average government incentives for EV purchases</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 bg-gray-700/30 p-4 rounded">
+                                <h3 class="text-white font-medium mb-3">Competitor Analysis</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-700">
+                                        <thead>
+                                            <tr>
+                                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Competitor</th>
+                                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">EV Strategy</th>
+                                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Conversion Rate</th>
+                                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Market Share</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-gray-700">
+                                            <tr>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">Volkswagen Group</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">Platform-based conversion</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">35%</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">12.3%</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">Toyota Motors</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">Hybrid-first approach</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">22%</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">10.5%</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">General Motors</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">New EV-only platforms</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">28%</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">8.7%</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">Hyundai-Kia</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">Dual platform strategy</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">31%</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">7.2%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="bg-gray-700/30 rounded p-4 h-full">
+                                <h3 class="text-white font-medium mb-4">Market Projection</h3>
+                                <div id="marketChart" class="w-full h-80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Implementation Plan & Timeline -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Implementation Plan -->
+                    <section class="bg-gray-800 rounded p-6">
+                        <h2 class="text-xl font-semibold text-white mb-4">Implementation Plan</h2>
+                        <div class="space-y-4">
+                            <div class="bg-gray-700/30 p-4 rounded">
+                                <h3 class="text-white font-medium flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 bg-primary/20 text-primary rounded-full">
+                                        <span class="text-xs">1</span>
+                                    </div>
+                                    Phase 1: Research & Development
+                                </h3>
+                                <div class="mt-2 pl-8">
+                                    <ul class="text-gray-300 space-y-2 text-sm">
+                                        <li class="flex items-start">
+                                            <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-green-400">
+                                                <i class="ri-checkbox-circle-fill"></i>
+                                            </div>
+                                            <span>Technical feasibility studies for each model</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-green-400">
+                                                <i class="ri-checkbox-circle-fill"></i>
+                                            </div>
+                                            <span>Battery technology assessment</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-green-400">
+                                                <i class="ri-checkbox-circle-fill"></i>
+                                            </div>
+                                            <span>Market research and consumer preference analysis</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gray-700/30 p-4 rounded">
+                                <h3 class="text-white font-medium flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 bg-primary/20 text-primary rounded-full">
+                                        <span class="text-xs">2</span>
+                                    </div>
+                                    Phase 2: Platform Development
+                                </h3>
+                                <div class="mt-2 pl-8">
+                                    <ul class="text-gray-300 space-y-2 text-sm">
+                                        <li class="flex items-start">
+                                            <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-green-400">
+                                                <i class="ri-checkbox-circle-fill"></i>
+                                            </div>
+                                            <span>Modular electric architecture design</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-amber-400">
+                                                <i class="ri-time-line"></i>
+                                            </div>
+                                            <span>Battery management system integration</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-amber-400">
+                                                <i class="ri-time-line"></i>
+                                            </div>
+                                            <span>Drivetrain optimization for existing chassis</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gray-700/30 p-4 rounded">
+                                <h3 class="text-white font-medium flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 bg-primary/20 text-primary rounded-full">
+                                        <span class="text-xs">3</span>
+                                    </div>
+                                    Phase 3: Production Line Modification
+                                </h3>
+                                <div class="mt-2 pl-8">
+                                    <ul class="text-gray-300 space-y-2 text-sm">
+                                        <li class="flex items-start">
+                                            <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-amber-400">
+                                                <i class="ri-time-line"></i>
+                                            </div>
+                                            <span>Retooling of assembly lines</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-gray-500">
+                                                <i class="ri-checkbox-blank-circle-line"></i>
+                                            </div>
+                                            <span>Implementation of new quality control processes</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-gray-500">
+                                                <i class="ri-checkbox-blank-circle-line"></i>
+                                            </div>
+                                            <span>Staff training on new production methods</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gray-700/30 p-4 rounded">
+                                <h3 class="text-white font-medium flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 bg-primary/20 text-primary rounded-full">
+                                        <span class="text-xs">4</span>
+                                    </div>
+                                    Phase 4: Testing & Validation
+                                </h3>
+                                <div class="mt-2 pl-8">
+                                    <ul class="text-gray-300 space-y-2 text-sm">
+                                        <li class="flex items-start">
+                                            <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-gray-500">
+                                                <i class="ri-checkbox-blank-circle-line"></i>
+                                            </div>
+                                            <span>Prototype testing and refinement</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-gray-500">
+                                                <i class="ri-checkbox-blank-circle-line"></i>
+                                            </div>
+                                            <span>Regulatory compliance verification</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-gray-500">
+                                                <i class="ri-checkbox-blank-circle-line"></i>
+                                            </div>
+                                            <span>Performance and safety certification</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gray-700/30 p-4 rounded">
+                                <h3 class="text-white font-medium flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 bg-primary/20 text-primary rounded-full">
+                                        <span class="text-xs">5</span>
+                                    </div>
+                                    Phase 5: Market Launch
+                                </h3>
+                                <div class="mt-2 pl-8">
+                                    <ul class="text-gray-300 space-y-2 text-sm">
+                                        <li class="flex items-start">
+                                            <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-gray-500">
+                                                <i class="ri-checkbox-blank-circle-line"></i>
+                                            </div>
+                                            <span>Dealer network preparation and training</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-gray-500">
+                                                <i class="ri-checkbox-blank-circle-line"></i>
+                                            </div>
+                                            <span>Marketing campaign development</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-gray-500">
+                                                <i class="ri-checkbox-blank-circle-line"></i>
+                                            </div>
+                                            <span>Phased regional rollout strategy</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Timeline -->
+                    <section class="bg-gray-800 rounded p-6">
+                        <h2 class="text-xl font-semibold text-white mb-4">Timeline</h2>
+                        <div id="timelineChart" class="w-full h-80 mb-4"></div>
+                        <div class="bg-gray-700/30 p-4 rounded">
+                            <h3 class="text-white font-medium mb-3">Key Milestones</h3>
+                            <div class="space-y-4">
+                                <div class="flex">
+                                    <div class="flex flex-col items-center mr-4">
+                                        <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                                        <div class="h-full w-0.5 bg-gray-600"></div>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center">
+                                            <span class="text-green-400 text-sm font-medium">Completed</span>
+                                            <span class="text-gray-400 text-xs ml-2">March 15, 2024</span>
+                                        </div>
+                                        <p class="text-white text-sm mt-1">Initial feasibility studies completed</p>
+                                        <p class="text-gray-400 text-xs mt-1">Technical assessment of all current ICE models finalized with conversion potential ratings</p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex flex-col items-center mr-4">
+                                        <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                                        <div class="h-full w-0.5 bg-gray-600"></div>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center">
+                                            <span class="text-green-400 text-sm font-medium">Completed</span>
+                                            <span class="text-gray-400 text-xs ml-2">April 28, 2024</span>
+                                        </div>
+                                        <p class="text-white text-sm mt-1">Platform architecture finalized</p>
+                                        <p class="text-gray-400 text-xs mt-1">Modular electric platform design approved for production development</p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex flex-col items-center mr-4">
+                                        <div class="w-3 h-3 bg-amber-400 rounded-full"></div>
+                                        <div class="h-full w-0.5 bg-gray-600"></div>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center">
+                                            <span class="text-amber-400 text-sm font-medium">In Progress</span>
+                                            <span class="text-gray-400 text-xs ml-2">Due: July 15, 2024</span>
+                                        </div>
+                                        <p class="text-white text-sm mt-1">First production line retrofit</p>
+                                        <p class="text-gray-400 text-xs mt-1">Conversion of Plant A assembly line to support EV production</p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex flex-col items-center mr-4">
+                                        <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
+                                        <div class="h-full w-0.5 bg-gray-600"></div>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center">
+                                            <span class="text-gray-400 text-sm font-medium">Upcoming</span>
+                                            <span class="text-gray-400 text-xs ml-2">Due: October 10, 2024</span>
+                                        </div>
+                                        <p class="text-white text-sm mt-1">First prototype testing</p>
+                                        <p class="text-gray-400 text-xs mt-1">Initial prototype of Sedan X electric variant ready for testing</p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex flex-col items-center mr-4">
+                                        <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
+                                        <div class="h-full w-0.5 bg-transparent"></div>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center">
+                                            <span class="text-gray-400 text-sm font-medium">Upcoming</span>
+                                            <span class="text-gray-400 text-xs ml-2">Due: March 25, 2025</span>
+                                        </div>
+                                        <p class="text-white text-sm mt-1">First market launch</p>
+                                        <p class="text-gray-400 text-xs mt-1">Launch of first converted model in European markets</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Budget & Stakeholders -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Budget Breakdown -->
+                    <section class="bg-gray-800 rounded p-6">
+                        <h2 class="text-xl font-semibold text-white mb-4">Budget Breakdown</h2>
+                        <div class="grid grid-cols-1 gap-6">
+                            <div class="bg-gray-700/30 rounded p-4">
+                                <h3 class="text-white font-medium mb-3">Total Investment: $2.5 Billion</h3>
+                                <div id="budgetChart" class="w-full h-64"></div>
+                            </div>
+                            <div class="bg-gray-700/30 rounded p-4">
+                                <h3 class="text-white font-medium mb-3">Detailed Allocation</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-700">
+                                        <thead>
+                                            <tr>
+                                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Category</th>
+                                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Amount (USD)</th>
+                                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Percentage</th>
+                                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-gray-700">
+                                            <tr>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">R&D</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">$750M</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">30%</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm">
+                                                    <span class="px-2 py-1 text-xs rounded-full bg-green-400/20 text-green-400">Allocated</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">Manufacturing Facility Updates</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">$1B</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">40%</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm">
+                                                    <span class="px-2 py-1 text-xs rounded-full bg-amber-400/20 text-amber-400">In Progress</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">Training and Development</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">$375M</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">15%</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm">
+                                                    <span class="px-2 py-1 text-xs rounded-full bg-gray-500/20 text-gray-400">Pending</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">Marketing and Launch</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">$375M</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-300">15%</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm">
+                                                    <span class="px-2 py-1 text-xs rounded-full bg-gray-500/20 text-gray-400">Pending</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Key Stakeholders -->
+                    <section class="bg-gray-800 rounded p-6">
+                        <h2 class="text-xl font-semibold text-white mb-4">Key Stakeholders</h2>
+                        <div class="space-y-6">
+                            <div class="bg-gray-700/30 p-4 rounded">
+                                <h3 class="text-white font-medium mb-3">Internal Teams</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="bg-gray-700/50 p-3 rounded flex items-center">
+                                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mr-3">
+                                            <div class="w-6 h-6 flex items-center justify-center">
+                                                <i class="ri-tools-line text-primary"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="text-white text-sm font-medium">Engineering Team</p>
+                                            <p class="text-gray-400 text-xs">Lead: Dr. Sarah Chen</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-700/50 p-3 rounded flex items-center">
+                                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mr-3">
+                                            <div class="w-6 h-6 flex items-center justify-center">
+                                                <i class="ri-factory-line text-primary"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="text-white text-sm font-medium">Production Managers</p>
+                                            <p class="text-gray-400 text-xs">Lead: James Rodriguez</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-700/50 p-3 rounded flex items-center">
+                                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mr-3">
+                                            <div class="w-6 h-6 flex items-center justify-center">
+                                                <i class="ri-user-settings-line text-primary"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="text-white text-sm font-medium">Training Department</p>
+                                            <p class="text-gray-400 text-xs">Lead: Emily Watkins</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-700/50 p-3 rounded flex items-center">
+                                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mr-3">
+                                            <div class="w-6 h-6 flex items-center justify-center">
+                                                <i class="ri-advertisement-line text-primary"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="text-white text-sm font-medium">Marketing Team</p>
+                                            <p class="text-gray-400 text-xs">Lead: Michael Thompson</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gray-700/30 p-4 rounded">
+                                <h3 class="text-white font-medium mb-3">External Partners</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="bg-gray-700/50 p-3 rounded flex items-center">
+                                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mr-3">
+                                            <div class="w-6 h-6 flex items-center justify-center">
+                                                <i class="ri-battery-2-charge-line text-primary"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="text-white text-sm font-medium">EnergyTech Solutions</p>
+                                            <p class="text-gray-400 text-xs">Battery technology provider</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-700/50 p-3 rounded flex items-center">
+                                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mr-3">
+                                            <div class="w-6 h-6 flex items-center justify-center">
+                                                <i class="ri-store-2-line text-primary"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="text-white text-sm font-medium">Dealership Network</p>
+                                            <p class="text-gray-400 text-xs">1,200+ locations worldwide</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-700/50 p-3 rounded flex items-center">
+                                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mr-3">
+                                            <div class="w-6 h-6 flex items-center justify-center">
+                                                <i class="ri-truck-line text-primary"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="text-white text-sm font-medium">GlobalSupply Inc.</p>
+                                            <p class="text-gray-400 text-xs">Supply chain partner</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-700/50 p-3 rounded flex items-center">
+                                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mr-3">
+                                            <div class="w-6 h-6 flex items-center justify-center">
+                                                <i class="ri-government-line text-primary"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="text-white text-sm font-medium">Regulatory Bodies</p>
+                                            <p class="text-gray-400 text-xs">Multiple regional authorities</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gray-700/30 p-4 rounded">
+                                <h3 class="text-white font-medium mb-3">RACI Matrix</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-700 text-sm">
+                                        <thead>
+                                            <tr>
+                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Activity</th>
+                                                <th class="px-4 py-2 text-center text-xs font-medium text-gray-400 uppercase tracking-wider">Engineering</th>
+                                                <th class="px-4 py-2 text-center text-xs font-medium text-gray-400 uppercase tracking-wider">Production</th>
+                                                <th class="px-4 py-2 text-center text-xs font-medium text-gray-400 uppercase tracking-wider">Training</th>
+                                                <th class="px-4 py-2 text-center text-xs font-medium text-gray-400 uppercase tracking-wider">Marketing</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-gray-700">
+                                            <tr>
+                                                <td class="px-4 py-2 whitespace-nowrap text-gray-300">Platform Design</td>
+                                                <td class="px-4 py-2 text-center text-primary font-medium">R</td>
+                                                <td class="px-4 py-2 text-center text-gray-300">A</td>
+                                                <td class="px-4 py-2 text-center text-gray-300">I</td>
+                                                <td class="px-4 py-2 text-center text-gray-300">I</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-2 whitespace-nowrap text-gray-300">Production Line Conversion</td>
+                                                <td class="px-4 py-2 text-center text-gray-300">C</td>
+                                                <td class="px-4 py-2 text-center text-primary font-medium">R</td>
+                                                <td class="px-4 py-2 text-center text-gray-300">C</td>
+                                                <td class="px-4 py-2 text-center text-gray-300">I</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-2 whitespace-nowrap text-gray-300">Staff Training</td>
+                                                <td class="px-4 py-2 text-center text-gray-300">C</td>
+                                                <td class="px-4 py-2 text-center text-gray-300">A</td>
+                                                <td class="px-4 py-2 text-center text-primary font-medium">R</td>
+                                                <td class="px-4 py-2 text-center text-gray-300">I</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-2 whitespace-nowrap text-gray-300">Market Launch</td>
+                                                <td class="px-4 py-2 text-center text-gray-300">I</td>
+                                                <td class="px-4 py-2 text-center text-gray-300">C</td>
+                                                <td class="px-4 py-2 text-center text-gray-300">C</td>
+                                                <td class="px-4 py-2 text-center text-primary font-medium">R</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="mt-2 text-xs text-gray-400">
+                                    <span class="inline-block mr-3">R: Responsible</span>
+                                    <span class="inline-block mr-3">A: Accountable</span>
+                                    <span class="inline-block mr-3">C: Consulted</span>
+                                    <span class="inline-block">I: Informed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Risk Assessment & Expected Outcomes -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Risk Assessment -->
+                    <section class="bg-gray-800 rounded p-6">
+                        <h2 class="text-xl font-semibold text-white mb-4">Risk Assessment</h2>
+                        <div class="space-y-6">
+                            <div class="bg-gray-700/30 p-4 rounded">
+                                <h3 class="text-white font-medium mb-3">Risk Matrix</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-700">
+                                        <thead>
+                                            <tr>
+                                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Risk</th>
+                                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Impact</th>
+                                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Probability</th>
+                                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Severity</th>
+                                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Mitigation</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-gray-700">
+                                            <tr>
+                                                <td class="px-4 py-3 text-sm text-gray-300">Battery supply chain disruption</td>
+                                                <td class="px-4 py-3 text-sm text-gray-300">High</td>
+                                                <td class="px-4 py-3 text-sm text-gray-300">Medium</td>
+                                                <td class="px-4 py-3 text-sm">
+                                                    <span class="px-2 py-1 text-xs rounded-full bg-red-400/20 text-red-400">High</span>
+                                                </td>
+                                                <td class="px-4 py-3 text-sm text-gray-300">Multiple supplier agreements, strategic reserves</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-3 text-sm text-gray-300">Technical challenges in conversion</td>
+                                                <td class="px-4 py-3 text-sm text-gray-300">High</td>
+                                                <td class="px-4 py-3 text-sm text-gray-300">Medium</td>
+                                                <td class="px-4 py-3 text-sm">
+                                                    <span class="px-2 py-1 text-xs rounded-full bg-red-400/20 text-red-400">High</span>
+                                                </td>
+                                                <td class="px-4 py-3 text-sm text-gray-300">Extensive testing, phased approach, expert consultation</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-3 text-sm text-gray-300">Market acceptance risk</td>
+                                                <td class="px-4 py-3 text-sm text-gray-300">High</td>
+                                                <td class="px-4 py-3 text-sm text-gray-300">Low</td>
+                                                <td class="px-4 py-3 text-sm">
+                                                    <span class="px-2 py-1 text-xs rounded-full bg-amber-400/20 text-amber-400">Medium</span>
+                                                </td>
+                                                <td class="px-4 py-3 text-sm text-gray-300">Customer education, incentive programs, extended warranties</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-3 text-sm text-gray-300">Regulatory compliance issues</td>
+                                                <td class="px-4 py-3 text-sm text-gray-300">Medium</td>
+                                                <td class="px-4 py-3 text-sm text-gray-300">Low</td>
+                                                <td class="px-4 py-3 text-sm">
+                                                    <span class="px-2 py-1 text-xs rounded-full bg-amber-400/20 text-amber-400">Medium</span>
+                                                </td>
+                                                <td class="px-4 py-3 text-sm text-gray-300">Early engagement with regulators, compliance team</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-3 text-sm text-gray-300">Cost overruns</td>
+                                                <td class="px-4 py-3 text-sm text-gray-300">Medium</td>
+                                                <td class="px-4 py-3 text-sm text-gray-300">Medium</td>
+                                                <td class="px-4 py-3 text-sm">
+                                                    <span class="px-2 py-1 text-xs rounded-full bg-amber-400/20 text-amber-400">Medium</span>
+                                                </td>
+                                                <td class="px-4 py-3 text-sm text-gray-300">Phased funding, regular financial reviews, contingency budget</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gray-700/30 p-4 rounded">
+                                <h3 class="text-white font-medium mb-3">Contingency Plans</h3>
+                                <div class="space-y-3">
+                                    <div class="bg-gray-700/50 p-3 rounded">
+                                        <h4 class="text-white text-sm font-medium">Supply Chain Disruption</h4>
+                                        <p class="text-gray-300 text-sm mt-1">Implementation of a dual-supplier strategy for critical components with 20% buffer inventory maintained at all times. Alternative materials research program in place.</p>
+                                    </div>
+                                    <div class="bg-gray-700/50 p-3 rounded">
+                                        <h4 class="text-white text-sm font-medium">Technical Challenges</h4>
+                                        <p class="text-gray-300 text-sm mt-1">Parallel development of two technical approaches with decision gates at key milestones. Extended testing phase with customer beta program for real-world feedback.</p>
+                                    </div>
+                                    <div class="bg-gray-700/50 p-3 rounded">
+                                        <h4 class="text-white text-sm font-medium">Market Acceptance</h4>
+                                        <p class="text-gray-300 text-sm mt-1">Phased rollout strategy with initial launch in EV-friendly markets. Customer incentive program and extended warranty options to reduce adoption barriers.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Expected Outcomes -->
+                    <section class="bg-gray-800 rounded p-6">
+                        <h2 class="text-xl font-semibold text-white mb-4">Expected Outcomes</h2>
+                        <div class="space-y-6">
+                            <div class="bg-gray-700/30 p-4 rounded">
+                                <h3 class="text-white font-medium mb-3">Environmental Impact</h3>
+                                <div id="emissionsChart" class="w-full h-64"></div>
+                                <div class="mt-3 text-sm text-gray-300">
+                                    <p>Projected 40% reduction in fleet carbon emissions by 2027, with complete elimination of tailpipe emissions for converted models. Manufacturing emissions expected to decrease by 25% through improved processes.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gray-700/30 p-4 rounded">
+                                <h3 class="text-white font-medium mb-3">Business Outcomes</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="bg-gray-700/50 p-3 rounded">
+                                        <div class="flex items-center justify-between">
+                                            <h4 class="text-white text-sm font-medium">Market Share</h4>
+                                            <span class="text-green-400 text-sm font-medium">+3.2%</span>
+                                        </div>
+                                        <p class="text-gray-300 text-sm mt-1">Projected increase in global market share by 2026, driven by early adoption in key markets and positive brand perception.</p>
+                                    </div>
+                                    <div class="bg-gray-700/50 p-3 rounded">
+                                        <div class="flex items-center justify-between">
+                                            <h4 class="text-white text-sm font-medium">Cost Savings</h4>
+                                            <span class="text-green-400 text-sm font-medium">$320M/year</span>
+                                        </div>
+                                        <p class="text-gray-300 text-sm mt-1">Annual savings through platform sharing, reduced parts complexity, and streamlined manufacturing processes.</p>
+                                    </div>
+                                    <div class="bg-gray-700/50 p-3 rounded">
+                                        <div class="flex items-center justify-between">
+                                            <h4 class="text-white text-sm font-medium">Customer Satisfaction</h4>
+                                            <span class="text-green-400 text-sm font-medium">+15 NPS</span>
+                                        </div>
+                                        <p class="text-gray-300 text-sm mt-1">Projected increase in Net Promoter Score based on early customer feedback and market research data.</p>
+                                    </div>
+                                    <div class="bg-gray-700/50 p-3 rounded">
+                                        <div class="flex items-center justify-between">
+                                            <h4 class="text-white text-sm font-medium">Revenue Growth</h4>
+                                            <span class="text-green-400 text-sm font-medium">12% CAGR</span>
+                                        </div>
+                                        <p class="text-gray-300 text-sm mt-1">Compound Annual Growth Rate for EV segment revenue through 2027, outpacing overall market growth.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gray-700/30 p-4 rounded">
+                                <h3 class="text-white font-medium mb-3">Strategic Positioning</h3>
+                                <div class="space-y-3 text-sm text-gray-300">
+                                    <p>The successful implementation of our ICE Model Conversion initiative will position us as an industry leader in sustainable transportation, with several key advantages:</p>
+                                    <ul class="space-y-2 pl-5 list-disc">
+                                        <li>Ability to leverage existing brand loyalty while transitioning to electric mobility</li>
+                                        <li>Optimized manufacturing costs through shared platforms and components</li>
+                                        <li>Reduced regulatory compliance risks in markets with upcoming ICE restrictions</li>
+                                        <li>Enhanced brand perception as an environmentally responsible manufacturer</li>
+                                        <li>Improved talent acquisition and retention through forward-looking initiatives</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Supporting Documents & Action Center -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Supporting Documents -->
+                    <section class="bg-gray-800 rounded p-6 md:col-span-2">
+                        <h2 class="text-xl font-semibold text-white mb-4">Supporting Documents</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-gray-700/30 p-4 rounded">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center mr-3">
+                                        <div class="w-6 h-6 flex items-center justify-center">
+                                            <i class="ri-file-text-line text-primary"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-white font-medium text-sm">Technical Specifications</h3>
+                                        <p class="text-gray-400 text-xs">Detailed engineering specifications for EV platform</p>
+                                    </div>
+                                    <button class="bg-gray-700 hover:bg-gray-600 text-white py-1 px-3 rounded-button text-sm whitespace-nowrap">View</button>
+                                </div>
+                            </div>
+                            <div class="bg-gray-700/30 p-4 rounded">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center mr-3">
+                                        <div class="w-6 h-6 flex items-center justify-center">
+                                            <i class="ri-book-open-line text-primary"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-white font-medium text-sm">Conversion Guidelines</h3>
+                                        <p class="text-gray-400 text-xs">Step-by-step process for ICE to EV conversion</p>
+                                    </div>
+                                    <button class="bg-gray-700 hover:bg-gray-600 text-white py-1 px-3 rounded-button text-sm whitespace-nowrap">View</button>
+                                </div>
+                            </div>
+                            <div class="bg-gray-700/30 p-4 rounded">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center mr-3">
+                                        <div class="w-6 h-6 flex items-center justify-center">
+                                            <i class="ri-graduation-cap-line text-primary"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-white font-medium text-sm">Training Materials</h3>
+                                        <p class="text-gray-400 text-xs">Staff and dealer training curriculum</p>
+                                    </div>
+                                    <button class="bg-gray-700 hover:bg-gray-600 text-white py-1 px-3 rounded-button text-sm whitespace-nowrap">View</button>
+                                </div>
+                            </div>
+                            <div class="bg-gray-700/30 p-4 rounded">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center mr-3">
+                                        <div class="w-6 h-6 flex items-center justify-center">
+                                            <i class="ri-bar-chart-line text-primary"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-white font-medium text-sm">Market Research</h3>
+                                        <p class="text-gray-400 text-xs">Consumer sentiment and market trends analysis</p>
+                                    </div>
+                                    <button class="bg-gray-700 hover:bg-gray-600 text-white py-1 px-3 rounded-button text-sm whitespace-nowrap">View</button>
+                                </div>
+                            </div>
+                            <div class="bg-gray-700/30 p-4 rounded">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center mr-3">
+                                        <div class="w-6 h-6 flex items-center justify-center">
+                                            <i class="ri-earth-line text-primary"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-white font-medium text-sm">Environmental Impact</h3>
+                                        <p class="text-gray-400 text-xs">Lifecycle assessment and carbon reduction analysis</p>
+                                    </div>
+                                    <button class="bg-gray-700 hover:bg-gray-600 text-white py-1 px-3 rounded-button text-sm whitespace-nowrap">View</button>
+                                </div>
+                            </div>
+                            <div class="bg-gray-700/30 p-4 rounded">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center mr-3">
+                                        <div class="w-6 h-6 flex items-center justify-center">
+                                            <i class="ri-government-line text-primary"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-white font-medium text-sm">Regulatory Compliance</h3>
+                                        <p class="text-gray-400 text-xs">Regional requirements and certification processes</p>
+                                    </div>
+                                    <button class="bg-gray-700 hover:bg-gray-600 text-white py-1 px-3 rounded-button text-sm whitespace-nowrap">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Action Center -->
+                    <section class="bg-gray-800 rounded p-6">
+                        <h2 class="text-xl font-semibold text-white mb-4">Action Center</h2>
+                        <div class="space-y-4">
+                            <div class="bg-gray-700/30 p-4 rounded">
+                                <h3 class="text-white font-medium mb-3">Current Tasks</h3>
+                                <div class="space-y-2">
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="task1" class="hidden peer">
+                                        <label for="task1" class="flex items-center cursor-pointer">
+                                            <div class="w-5 h-5 border border-gray-500 rounded mr-3 flex items-center justify-center peer-checked:bg-primary peer-checked:border-primary">
+                                                <div class="w-3 h-3 flex items-center justify-center text-white opacity-0 peer-checked:opacity-100">
+                                                    <i class="ri-check-line"></i>
+                                                </div>
+                                            </div>
+                                            <span class="text-gray-300 text-sm peer-checked:line-through peer-checked:text-gray-500">Complete battery supplier evaluation</span>
+                                        </label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="task2" class="hidden peer">
+                                        <label for="task2" class="flex items-center cursor-pointer">
+                                            <div class="w-5 h-5 border border-gray-500 rounded mr-3 flex items-center justify-center peer-checked:bg-primary peer-checked:border-primary">
+                                                <div class="w-3 h-3 flex items-center justify-center text-white opacity-0 peer-checked:opacity-100">
+                                                    <i class="ri-check-line"></i>
+                                                </div>
+                                            </div>
+                                            <span class="text-gray-300 text-sm peer-checked:line-through peer-checked:text-gray-500">Finalize Plant A retrofit plans</span>
+                                        </label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="task3" class="hidden peer">
+                                        <label for="task3" class="flex items-center cursor-pointer">
+                                            <div class="w-5 h-5 border border-gray-500 rounded mr-3 flex items-center justify-center peer-checked:bg-primary peer-checked:border-primary">
+                                                <div class="w-3 h-3 flex items-center justify-center text-white opacity-0 peer-checked:opacity-100">
+                                                    <i class="ri-check-line"></i>
+                                                </div>
+                                            </div>
+                                            <span class="text-gray-300 text-sm peer-checked:line-through peer-checked:text-gray-500">Submit regulatory compliance documents</span>
+                                        </label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="task4" class="hidden peer">
+                                        <label for="task4" class="flex items-center cursor-pointer">
+                                            <div class="w-5 h-5 border border-gray-500 rounded mr-3 flex items-center justify-center peer-checked:bg-primary peer-checked:border-primary">
+                                                <div class="w-3 h-3 flex items-center justify-center text-white opacity-0 peer-checked:opacity-100">
+                                                    <i class="ri-check-line"></i>
+                                                </div>
+                                            </div>
+                                            <span class="text-gray-300 text-sm peer-checked:line-through peer-checked:text-gray-500">Develop training curriculum for production staff</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gray-700/30 p-4 rounded">
+                                <h3 class="text-white font-medium mb-3">Upcoming Milestones</h3>
+                                <div class="space-y-3">
+                                    <div class="flex items-start">
+                                        <div class="w-10 min-w-10 h-10 bg-amber-500/20 rounded-full flex items-center justify-center mr-3">
+                                            <div class="w-6 h-6 flex items-center justify-center text-amber-400">
+                                                <i class="ri-calendar-event-line"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="text-white text-sm font-medium">First Production Line Retrofit</p>
+                                            <p class="text-gray-400 text-xs">Due: July 15, 2024</p>
+                                            <div class="mt-1 flex items-center text-xs">
+                                                <span class="text-amber-400">65% Complete</span>
+                                                <span class="mx-2 text-gray-500">|</span>
+                                                <span class="text-gray-400">Owner: J. Rodriguez</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="w-10 min-w-10 h-10 bg-gray-600/30 rounded-full flex items-center justify-center mr-3">
+                                            <div class="w-6 h-6 flex items-center justify-center text-gray-400">
+                                                <i class="ri-calendar-event-line"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="text-white text-sm font-medium">Engineering Sign-off on First Prototype</p>
+                                            <p class="text-gray-400 text-xs">Due: September 30, 2024</p>
+                                            <div class="mt-1 flex items-center text-xs">
+                                                <span class="text-gray-400">10% Complete</span>
+                                                <span class="mx-2 text-gray-500">|</span>
+                                                <span class="text-gray-400">Owner: S. Chen</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4">
+                                <button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button w-full flex items-center justify-center whitespace-nowrap">
+                                    <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                        <i class="ri-add-line"></i>
+                                    </div>
+                                    <span>Schedule Progress Review</span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 border-t border-gray-800 py-6">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-gray-400 text-sm">Last updated: April 28, 2025</p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://readdy.ai/home/2a7a8cfb-9728-47a4-a357-766fd0ecc5c9/3684a90d-9f4f-4459-acf6-b9c6f99b8615" data-readdy="true" class="text-gray-400 hover:text-primary text-sm">Back to Strategic Priorities</a>
+                        <span class="text-gray-600">|</span>
+                        <a href="#" class="text-gray-400 hover:text-primary text-sm">Export as PDF</a>
+                        <span class="text-gray-600">|</span>
+                        <a href="#" class="text-gray-400 hover:text-primary text-sm">Share</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Market Chart
+            const marketChart = echarts.init(document.getElementById('marketChart'));
+            const marketOption = {
+                animation: false,
+                tooltip: {
+                    trigger: 'axis',
+                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                    textStyle: {
+                        color: '#1f2937'
+                    }
+                },
+                legend: {
+                    data: ['ICE Models', 'Electric Variants'],
+                    textStyle: {
+                        color: '#e5e7eb'
+                    }
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['2023', '2024', '2025', '2026', '2027', '2028'],
+                    axisLabel: {
+                        color: '#e5e7eb'
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#4b5563'
+                        }
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    name: 'Market Share %',
+                    nameTextStyle: {
+                        color: '#e5e7eb'
+                    },
+                    axisLabel: {
+                        color: '#e5e7eb'
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#4b5563'
+                        }
+                    },
+                    splitLine: {
+                        lineStyle: {
+                            color: '#374151'
+                        }
+                    }
+                },
+                series: [
+                    {
+                        name: 'ICE Models',
+                        type: 'line',
+                        stack: 'Total',
+                        color: 'rgba(252, 141, 98, 1)',
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                { offset: 0, color: 'rgba(252, 141, 98, 0.1)' },
+                                { offset: 1, color: 'rgba(252, 141, 98, 0)' }
+                            ])
+                        },
+                        emphasis: {
+                            focus: 'series'
+                        },
+                        smooth: true,
+                        data: [95, 85, 65, 45, 30, 20]
+                    },
+                    {
+                        name: 'Electric Variants',
+                        type: 'line',
+                        stack: 'Total',
+                        color: 'rgba(87, 181, 231, 1)',
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                { offset: 0, color: 'rgba(87, 181, 231, 0.1)' },
+                                { offset: 1, color: 'rgba(87, 181, 231, 0)' }
+                            ])
+                        },
+                        emphasis: {
+                            focus: 'series'
+                        },
+                        smooth: true,
+                        data: [5, 15, 35, 55, 70, 80]
+                    }
+                ]
+            };
+            marketChart.setOption(marketOption);
+
+            // Timeline Chart
+            const timelineChart = echarts.init(document.getElementById('timelineChart'));
+            const timelineOption = {
+                animation: false,
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'shadow'
+                    },
+                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                    textStyle: {
+                        color: '#1f2937'
+                    }
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['Q1 2024', 'Q2 2024', 'Q3 2024', 'Q4 2024', 'Q1 2025', 'Q2 2025'],
+                    axisLabel: {
+                        color: '#e5e7eb'
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#4b5563'
+                        }
+                    }
+                },
+                yAxis: {
+                    type: 'category',
+                    data: ['Market Launch', 'Testing', 'Production Line', 'Platform Dev', 'R&D'],
+                    axisLabel: {
+                        color: '#e5e7eb'
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#4b5563'
+                        }
+                    },
+                    splitLine: {
+                        lineStyle: {
+                            color: '#374151'
+                        }
+                    }
+                },
+                series: [
+                    {
+                        type: 'bar',
+                        stack: 'total',
+                        color: 'rgba(87, 181, 231, 1)',
+                        data: [
+                            // R&D
+                            {
+                                value: 1,
+                                itemStyle: {
+                                    color: 'rgba(87, 181, 231, 1)'
+                                }
+                            },
+                            // Platform Dev
+                            {
+                                value: 0,
+                                itemStyle: {
+                                    color: 'rgba(141, 211, 199, 0)'
+                                }
+                            },
+                            // Production Line
+                            {
+                                value: 0,
+                                itemStyle: {
+                                    color: 'rgba(251, 191, 114, 0)'
+                                }
+                            },
+                            // Testing
+                            {
+                                value: 0,
+                                itemStyle: {
+                                    color: 'rgba(252, 141, 98, 0)'
+                                }
+                            },
+                            // Market Launch
+                            {
+                                value: 0,
+                                itemStyle: {
+                                    color: 'rgba(231, 138, 195, 0)'
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        type: 'bar',
+                        stack: 'total',
+                        color: 'rgba(141, 211, 199, 1)',
+                        data: [
+                            // R&D
+                            {
+                                value: 0,
+                                itemStyle: {
+                                    color: 'rgba(87, 181, 231, 0)'
+                                }
+                            },
+                            // Platform Dev
+                            {
+                                value: 2,
+                                itemStyle: {
+                                    color: 'rgba(141, 211, 199, 1)'
+                                }
+                            },
+                            // Production Line
+                            {
+                                value: 0,
+                                itemStyle: {
+                                    color: 'rgba(251, 191, 114, 0)'
+                                }
+                            },
+                            // Testing
+                            {
+                                value: 0,
+                                itemStyle: {
+                                    color: 'rgba(252, 141, 98, 0)'
+                                }
+                            },
+                            // Market Launch
+                            {
+                                value: 0,
+                                itemStyle: {
+                                    color: 'rgba(231, 138, 195, 0)'
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        type: 'bar',
+                        stack: 'total',
+                        color: 'rgba(251, 191, 114, 1)',
+                        data: [
+                            // R&D
+                            {
+                                value: 0,
+                                itemStyle: {
+                                    color: 'rgba(87, 181, 231, 0)'
+                                }
+                            },
+                            // Platform Dev
+                            {
+                                value: 0,
+                                itemStyle: {
+                                    color: 'rgba(141, 211, 199, 0)'
+                                }
+                            },
+                            // Production Line
+                            {
+                                value: 2,
+                                itemStyle: {
+                                    color: 'rgba(251, 191, 114, 1)'
+                                }
+                            },
+                            // Testing
+                            {
+                                value: 0,
+                                itemStyle: {
+                                    color: 'rgba(252, 141, 98, 0)'
+                                }
+                            },
+                            // Market Launch
+                            {
+                                value: 0,
+                                itemStyle: {
+                                    color: 'rgba(231, 138, 195, 0)'
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        type: 'bar',
+                        stack: 'total',
+                        color: 'rgba(252, 141, 98, 1)',
+                        data: [
+                            // R&D
+                            {
+                                value: 0,
+                                itemStyle: {
+                                    color: 'rgba(87, 181, 231, 0)'
+                                }
+                            },
+                            // Platform Dev
+                            {
+                                value: 0,
+                                itemStyle: {
+                                    color: 'rgba(141, 211, 199, 0)'
+                                }
+                            },
+                            // Production Line
+                            {
+                                value: 0,
+                                itemStyle: {
+                                    color: 'rgba(251, 191, 114, 0)'
+                                }
+                            },
+                            // Testing
+                            {
+                                value: 1,
+                                itemStyle: {
+                                    color: 'rgba(252, 141, 98, 1)'
+                                }
+                            },
+                            // Market Launch
+                            {
+                                value: 0,
+                                itemStyle: {
+                                    color: 'rgba(231, 138, 195, 0)'
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        type: 'bar',
+                        stack: 'total',
+                        color: 'rgba(231, 138, 195, 1)',
+                        data: [
+                            // R&D
+                            {
+                                value: 0,
+                                itemStyle: {
+                                    color: 'rgba(87, 181, 231, 0)'
+                                }
+                            },
+                            // Platform Dev
+                            {
+                                value: 0,
+                                itemStyle: {
+                                    color: 'rgba(141, 211, 199, 0)'
+                                }
+                            },
+                            // Production Line
+                            {
+                                value: 0,
+                                itemStyle: {
+                                    color: 'rgba(251, 191, 114, 0)'
+                                }
+                            },
+                            // Testing
+                            {
+                                value: 0,
+                                itemStyle: {
+                                    color: 'rgba(252, 141, 98, 0)'
+                                }
+                            },
+                            // Market Launch
+                            {
+                                value: 1,
+                                itemStyle: {
+                                    color: 'rgba(231, 138, 195, 1)'
+                                }
+                            }
+                        ]
+                    }
+                ]
+            };
+            timelineChart.setOption(timelineOption);
+
+            // Budget Chart
+            const budgetChart = echarts.init(document.getElementById('budgetChart'));
+            const budgetOption = {
+                animation: false,
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b}: {c} ({d}%)',
+                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                    textStyle: {
+                        color: '#1f2937'
+                    }
+                },
+                legend: {
+                    orient: 'vertical',
+                    right: 10,
+                    top: 'center',
+                    data: ['R&D', 'Manufacturing Updates', 'Training', 'Marketing'],
+                    textStyle: {
+                        color: '#e5e7eb'
+                    }
+                },
+                series: [
+                    {
+                        name: 'Budget Allocation',
+                        type: 'pie',
+                        radius: ['40%', '70%'],
+                        avoidLabelOverlap: false,
+                        itemStyle: {
+                            borderRadius: 8,
+                            borderColor: '#111827',
+                            borderWidth: 2
+                        },
+                        label: {
+                            show: false,
+                            position: 'center'
+                        },
+                        emphasis: {
+                            label: {
+                                show: true,
+                                fontSize: 14,
+                                fontWeight: 'bold',
+                                color: '#ffffff'
+                            }
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        data: [
+                            { value: 750, name: 'R&D', itemStyle: { color: 'rgba(87, 181, 231, 1)' } },
+                            { value: 1000, name: 'Manufacturing Updates', itemStyle: { color: 'rgba(141, 211, 199, 1)' } },
+                            { value: 375, name: 'Training', itemStyle: { color: 'rgba(251, 191, 114, 1)' } },
+                            { value: 375, name: 'Marketing', itemStyle: { color: 'rgba(252, 141, 98, 1)' } }
+                        ]
+                    }
+                ]
+            };
+            budgetChart.setOption(budgetOption);
+
+            // Emissions Chart
+            const emissionsChart = echarts.init(document.getElementById('emissionsChart'));
+            const emissionsOption = {
+                animation: false,
+                tooltip: {
+                    trigger: 'axis',
+                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                    textStyle: {
+                        color: '#1f2937'
+                    }
+                },
+                legend: {
+                    data: ['Current Fleet', 'With ICE Conversion'],
+                    textStyle: {
+                        color: '#e5e7eb'
+                    }
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['2023', '2024', '2025', '2026', '2027'],
+                    axisLabel: {
+                        color: '#e5e7eb'
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#4b5563'
+                        }
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    name: 'CO₂ Emissions (tons)',
+                    nameTextStyle: {
+                        color: '#e5e7eb'
+                    },
+                    axisLabel: {
+                        color: '#e5e7eb'
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#4b5563'
+                        }
+                    },
+                    splitLine: {
+                        lineStyle: {
+                            color: '#374151'
+                        }
+                    }
+                },
+                series: [
+                    {
+                        name: 'Current Fleet',
+                        type: 'line',
+                        color: 'rgba(252, 141, 98, 1)',
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                { offset: 0, color: 'rgba(252, 141, 98, 0.1)' },
+                                { offset: 1, color: 'rgba(252, 141, 98, 0)' }
+                            ])
+                        },
+                        emphasis: {
+                            focus: 'series'
+                        },
+                        smooth: true,
+                        data: [1000000, 1050000, 1100000, 1150000, 1200000]
+                    },
+                    {
+                        name: 'With ICE Conversion',
+                        type: 'line',
+                        color: 'rgba(87, 181, 231, 1)',
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                { offset: 0, color: 'rgba(87, 181, 231, 0.1)' },
+                                { offset: 1, color: 'rgba(87, 181, 231, 0)' }
+                            ])
+                        },
+                        emphasis: {
+                            focus: 'series'
+                        },
+                        smooth: true,
+                        data: [1000000, 950000, 850000, 700000, 600000]
+                    }
+                ]
+            };
+            emissionsChart.setOption(emissionsOption);
+
+            // Resize charts when window size changes
+            window.addEventListener('resize', function() {
+                marketChart.resize();
+                timelineChart.resize();
+                budgetChart.resize();
+                emissionsChart.resize();
+            });
+        });
+    </script>
+</body>
+</html>

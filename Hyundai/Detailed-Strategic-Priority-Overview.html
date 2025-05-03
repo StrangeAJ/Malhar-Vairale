@@ -1,0 +1,1885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Mid-Segment EV Launch - Strategic Priority</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#1981ED',secondary:''},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+.chart-container {
+  width: 100%;
+  height: 300px;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #1981ED;
+  cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #1981ED;
+  cursor: pointer;
+}
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid #64748b;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.custom-checkbox.checked {
+  background-color: #1981ED;
+  border-color: #1981ED;
+}
+.custom-checkbox.checked::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.custom-radio {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid #64748b;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.custom-radio.checked {
+  border-color: #1981ED;
+}
+.custom-radio.checked::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: #1981ED;
+  border-radius: 50%;
+}
+.custom-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  background-color: #334155;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.custom-switch.checked {
+  background-color: #1981ED;
+}
+.custom-switch::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+.custom-switch.checked::after {
+  transform: translateX(20px);
+}
+.tab-button {
+  background-color: transparent;
+  color: #94a3b8;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.tab-button.active {
+  background-color: #1981ED;
+  color: white;
+}
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+</style>
+</head>
+<body>
+<header class="bg-slate-900 border-b border-slate-800">
+<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="text-2xl font-['Pacifico'] text-white">logo</span>
+<span class="text-lg font-semibold text-white">EV Strategy</span>
+</div>
+<nav class="hidden md:flex items-center space-x-6">
+<a href="#overview" class="text-slate-300 hover:text-primary transition-colors">Overview</a>
+<a href="#analysis" class="text-slate-300 hover:text-primary transition-colors">Analysis</a>
+<a href="#strategy" class="text-slate-300 hover:text-primary transition-colors">Strategy</a>
+<a href="#implementation" class="text-slate-300 hover:text-primary transition-colors">Implementation</a>
+<a href="#kpis" class="text-slate-300 hover:text-primary transition-colors">KPIs</a>
+<a href="https://readdy.ai/home/2a7a8cfb-9728-47a4-a357-766fd0ecc5c9/3684a90d-9f4f-4459-acf6-b9c6f99b8615" data-readdy="true" class="text-slate-300 hover:text-primary transition-colors">Main Strategy</a>
+</nav>
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-white">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</header>
+
+<main>
+<section class="bg-slate-900 py-6">
+<div class="container mx-auto px-4">
+<div class="flex items-center mb-6">
+<a href="https://readdy.ai/home/2a7a8cfb-9728-47a4-a357-766fd0ecc5c9/3684a90d-9f4f-4459-acf6-b9c6f99b8615" data-readdy="true" class="flex items-center text-slate-400 hover:text-primary transition-colors">
+<i class="ri-arrow-left-line mr-2"></i>
+<span>Back to Strategy Overview</span>
+</a>
+</div>
+<div class="flex items-center text-sm text-slate-400 mb-8">
+<a href="https://readdy.ai/home/2a7a8cfb-9728-47a4-a357-766fd0ecc5c9/3684a90d-9f4f-4459-acf6-b9c6f99b8615" data-readdy="true" class="hover:text-primary transition-colors">Strategy</a>
+<i class="ri-arrow-right-s-line mx-2"></i>
+<a href="https://readdy.ai/home/2a7a8cfb-9728-47a4-a357-766fd0ecc5c9/3684a90d-9f4f-4459-acf6-b9c6f99b8615" data-readdy="true" class="hover:text-primary transition-colors">Strategic Priorities</a>
+<i class="ri-arrow-right-s-line mx-2"></i>
+<span class="text-white">Premium Mid-Segment EV Launch</span>
+</div>
+</div>
+</section>
+
+<section class="bg-slate-800 py-12">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row gap-8">
+<div class="md:w-2/3">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-16 h-16 flex items-center justify-center bg-blue-500/20 text-primary rounded-lg">
+<i class="ri-car-line ri-2x"></i>
+</div>
+<h1 class="text-3xl md:text-4xl font-bold text-white">Premium Mid-Segment EV Launch</h1>
+</div>
+<p class="text-xl text-slate-300 mb-8">A strategic initiative to introduce premium electric vehicles in the mid-segment to capture the growing market of environmentally conscious consumers with higher purchasing power in India.</p>
+</div>
+<div class="md:w-1/3 bg-slate-900 rounded-lg p-6">
+<h3 class="text-lg font-semibold mb-4 text-white">Key Metrics</h3>
+<div class="space-y-4">
+<div class="flex justify-between">
+<span class="text-slate-400">Investment</span>
+<span class="text-white font-medium">£40 Million</span>
+</div>
+<div class="flex justify-between">
+<span class="text-slate-400">Timeline</span>
+<span class="text-white font-medium">12 Months</span>
+</div>
+<div class="flex justify-between">
+<span class="text-slate-400">Status</span>
+<span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">In Progress</span>
+</div>
+<div class="flex justify-between">
+<span class="text-slate-400">Completion</span>
+<div class="flex items-center gap-2">
+<div class="w-full bg-slate-700 h-2 rounded-full w-36">
+<div class="bg-primary h-2 rounded-full" style="width: 35%"></div>
+</div>
+<span class="text-white font-medium">35%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="bg-slate-900 py-12">
+<div class="container mx-auto px-4">
+<div class="bg-slate-800 rounded-lg p-6 mb-8">
+<h2 class="text-2xl font-bold mb-6 text-white">Executive Summary</h2>
+<p class="text-slate-300 mb-4">The Premium Mid-Segment EV Launch initiative aims to establish Hyundai Motor India as a key player in the electric vehicle market by introducing a lineup of premium electric vehicles targeted at the mid-segment. This strategic priority addresses the growing demand for sustainable transportation options among environmentally conscious consumers with higher purchasing power.</p>
+<p class="text-slate-300">By leveraging Hyundai's global EV expertise and adapting it to the specific needs of the Indian market, this initiative will position the company to capture a significant share of the rapidly expanding EV market. The launch will include multiple models with varying ranges and features, all designed to offer a premium experience at competitive price points.</p>
+</div>
+
+<div class="bg-slate-800 rounded-lg p-6 mb-8">
+<h2 class="text-2xl font-bold mb-6 text-white">Market Analysis</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="text-xl font-semibold mb-4 text-white">Market Size & Potential</h3>
+<div class="chart-container" id="marketSizeChart"></div>
+<ul class="mt-4 space-y-2 text-slate-300">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-arrow-right-line"></i>
+</div>
+<span>India's EV market projected to grow at 49% CAGR from 2022-2030</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-arrow-right-line"></i>
+</div>
+<span>Premium mid-segment (₹15-30 lakh) expected to grow by 65% annually</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-arrow-right-line"></i>
+</div>
+<span>Estimated 2.4 million potential customers in target segment by 2025</span>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-4 text-white">Competitor Analysis</h3>
+<div class="chart-container" id="competitorChart"></div>
+<ul class="mt-4 space-y-2 text-slate-300">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-arrow-right-line"></i>
+</div>
+<span>Tata Motors dominates with Nexon EV and upcoming Sierra EV</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-arrow-right-line"></i>
+</div>
+<span>Mahindra XUV400 gaining market share with aggressive pricing</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-arrow-right-line"></i>
+</div>
+<span>MG and BYD focusing on premium features with higher price points</span>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="text-xl font-semibold mb-4 text-white">Target Audience Demographics</h3>
+<ul class="space-y-3 text-slate-300">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-user-line"></i>
+</div>
+<span><span class="font-medium text-white">Age:</span> 30-55 years</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-money-dollar-circle-line"></i>
+</div>
+<span><span class="font-medium text-white">Income:</span> ₹15-25 lakh annual household income</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-building-line"></i>
+</div>
+<span><span class="font-medium text-white">Location:</span> Tier 1 cities and select Tier 2 cities</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-graduation-cap-line"></i>
+</div>
+<span><span class="font-medium text-white">Education:</span> Graduate and post-graduate professionals</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-heart-line"></i>
+</div>
+<span><span class="font-medium text-white">Values:</span> Environmentally conscious, tech-savvy, status-oriented</span>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-4 text-white">Growth Projections</h3>
+<div class="chart-container" id="growthProjectionChart"></div>
+<p class="mt-4 text-slate-300">Based on current market trends and Hyundai's planned investment, we project capturing 15% of the premium mid-segment EV market by 2026, with potential for accelerated growth through subsequent model launches.</p>
+</div>
+</div>
+</div>
+
+<div class="bg-slate-800 rounded-lg p-6 mb-8">
+<h2 class="text-2xl font-bold mb-6 text-white">Implementation Plan</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+<div class="bg-slate-900 p-5 rounded-lg">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-500/20 text-primary rounded-lg mb-4">
+<i class="ri-number-1"></i>
+</div>
+<h3 class="text-lg font-semibold mb-3 text-white">Product Development</h3>
+<ul class="space-y-2 text-slate-300">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span>Adapt global Hyundai IONIQ platform for Indian conditions</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span>Develop two variants: Standard (350km) and Long Range (500km)</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span>Integrate India-specific features (cabin cooling, dust protection)</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span>Complete homologation and regulatory compliance</span>
+</li>
+</ul>
+</div>
+<div class="bg-slate-900 p-5 rounded-lg">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-500/20 text-primary rounded-lg mb-4">
+<i class="ri-number-2"></i>
+</div>
+<h3 class="text-lg font-semibold mb-3 text-white">Manufacturing & Supply Chain</h3>
+<ul class="space-y-2 text-slate-300">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span>Upgrade Chennai plant for EV production (₹12M investment)</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span>Secure battery supply through LG Energy partnership</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span>Establish local component manufacturing for 40% localization</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span>Implement quality control processes specific to EV production</span>
+</li>
+</ul>
+</div>
+<div class="bg-slate-900 p-5 rounded-lg">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-500/20 text-primary rounded-lg mb-4">
+<i class="ri-number-3"></i>
+</div>
+<h3 class="text-lg font-semibold mb-3 text-white">Marketing & Distribution</h3>
+<ul class="space-y-2 text-slate-300">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span>Develop premium positioning strategy with sustainability focus</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span>Create EV-specific showroom experiences in 20 key cities</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span>Launch digital configurator for personalized EV ordering</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span>Train sales staff on EV-specific features and selling points</span>
+</li>
+</ul>
+</div>
+</div>
+
+<h3 class="text-xl font-semibold mb-4 text-white">Key Milestones</h3>
+<div class="relative">
+<div class="absolute left-3 top-0 h-full w-0.5 bg-slate-700"></div>
+<div class="space-y-6">
+<div class="flex">
+<div class="relative z-10">
+<div class="w-6 h-6 flex items-center justify-center bg-primary text-white rounded-full">
+<i class="ri-check-line"></i>
+</div>
+</div>
+<div class="ml-6">
+<h4 class="text-lg font-medium text-white">Product Design Finalization</h4>
+<p class="text-slate-400">May 2024 (Completed)</p>
+<p class="text-slate-300">Final design approval for exterior and interior elements, including India-specific modifications.</p>
+</div>
+</div>
+<div class="flex">
+<div class="relative z-10">
+<div class="w-6 h-6 flex items-center justify-center bg-primary text-white rounded-full">
+<i class="ri-check-line"></i>
+</div>
+</div>
+<div class="ml-6">
+<h4 class="text-lg font-medium text-white">Manufacturing Setup</h4>
+<p class="text-slate-400">August 2024 (In Progress - 65% Complete)</p>
+<p class="text-slate-300">Upgrades to Chennai plant production line, installation of battery assembly equipment.</p>
+</div>
+</div>
+<div class="flex">
+<div class="relative z-10">
+<div class="w-6 h-6 flex items-center justify-center bg-slate-600 text-slate-300 rounded-full">
+<i class="ri-time-line"></i>
+</div>
+</div>
+<div class="ml-6">
+<h4 class="text-lg font-medium text-white">Prototype Testing</h4>
+<p class="text-slate-400">October 2024 (Upcoming)</p>
+<p class="text-slate-300">Comprehensive testing in Indian conditions, including extreme weather and road conditions.</p>
+</div>
+</div>
+<div class="flex">
+<div class="relative z-10">
+<div class="w-6 h-6 flex items-center justify-center bg-slate-600 text-slate-300 rounded-full">
+<i class="ri-time-line"></i>
+</div>
+</div>
+<div class="ml-6">
+<h4 class="text-lg font-medium text-white">Pre-Launch Marketing</h4>
+<p class="text-slate-400">January 2025 (Upcoming)</p>
+<p class="text-slate-300">Teaser campaign, influencer partnerships, and digital marketing rollout.</p>
+</div>
+</div>
+<div class="flex">
+<div class="relative z-10">
+<div class="w-6 h-6 flex items-center justify-center bg-slate-600 text-slate-300 rounded-full">
+<i class="ri-time-line"></i>
+</div>
+</div>
+<div class="ml-6">
+<h4 class="text-lg font-medium text-white">Official Launch</h4>
+<p class="text-slate-400">April 2025 (Upcoming)</p>
+<p class="text-slate-300">Public unveiling at Auto Expo 2025, with simultaneous events in 10 major cities.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="bg-slate-800 rounded-lg p-6 mb-8">
+<h2 class="text-2xl font-bold mb-6 text-white">Timeline</h2>
+<div class="chart-container h-96" id="ganttChart"></div>
+<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="text-xl font-semibold mb-4 text-white">Critical Path Elements</h3>
+<ul class="space-y-3 text-slate-300">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-red-400 mr-2 mt-0.5">
+<i class="ri-alert-line"></i>
+</div>
+<span>Battery supply chain establishment (potential delays due to global shortages)</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-red-400 mr-2 mt-0.5">
+<i class="ri-alert-line"></i>
+</div>
+<span>Regulatory approvals and homologation process</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-red-400 mr-2 mt-0.5">
+<i class="ri-alert-line"></i>
+</div>
+<span>Manufacturing line conversion and testing</span>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-4 text-white">Dependencies</h3>
+<ul class="space-y-3 text-slate-300">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-yellow-400 mr-2 mt-0.5">
+<i class="ri-link"></i>
+</div>
+<span>Battery & Raw Material Partnerships initiative (for supply chain)</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-yellow-400 mr-2 mt-0.5">
+<i class="ri-link"></i>
+</div>
+<span>Dedicated EV Showrooms initiative (for retail experience)</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-yellow-400 mr-2 mt-0.5">
+<i class="ri-link"></i>
+</div>
+<span>Celebrity-Led Campaigns initiative (for market awareness)</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="bg-slate-800 rounded-lg p-6 mb-8">
+<h2 class="text-2xl font-bold mb-6 text-white">Budget Breakdown</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<div class="chart-container" id="budgetChart"></div>
+<div class="mt-4">
+<h3 class="text-xl font-semibold mb-4 text-white">ROI Projections</h3>
+<div class="space-y-3">
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-slate-300">Year 1 (2025-26)</span>
+<span class="text-slate-300">£3.2M (8% return)</span>
+</div>
+<div class="w-full bg-slate-700 h-2 rounded-full">
+<div class="bg-red-500 h-2 rounded-full" style="width: 8%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-slate-300">Year 2 (2026-27)</span>
+<span class="text-slate-300">£8.8M (22% return)</span>
+</div>
+<div class="w-full bg-slate-700 h-2 rounded-full">
+<div class="bg-yellow-500 h-2 rounded-full" style="width: 22%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-slate-300">Year 3 (2027-28)</span>
+<span class="text-slate-300">£18M (45% return)</span>
+</div>
+<div class="w-full bg-slate-700 h-2 rounded-full">
+<div class="bg-green-500 h-2 rounded-full" style="width: 45%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-slate-300">Year 4 (2028-29)</span>
+<span class="text-slate-300">£28M (70% return)</span>
+</div>
+<div class="w-full bg-slate-700 h-2 rounded-full">
+<div class="bg-primary h-2 rounded-full" style="width: 70%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div class="bg-slate-900 p-5 rounded-lg mb-6">
+<h3 class="text-lg font-semibold mb-4 text-white">Detailed Cost Structure</h3>
+<div class="space-y-3">
+<div class="flex justify-between">
+<span class="text-slate-300">Product Development</span>
+<span class="text-white font-medium">£14.5M</span>
+</div>
+<div class="flex justify-between">
+<span class="text-slate-300">Manufacturing Setup</span>
+<span class="text-white font-medium">£12M</span>
+</div>
+<div class="flex justify-between">
+<span class="text-slate-300">Marketing & Launch</span>
+<span class="text-white font-medium">£6.5M</span>
+</div>
+<div class="flex justify-between">
+<span class="text-slate-300">Training & Development</span>
+<span class="text-white font-medium">£3M</span>
+</div>
+<div class="flex justify-between">
+<span class="text-slate-300">Contingency</span>
+<span class="text-white font-medium">£4M</span>
+</div>
+<div class="pt-2 border-t border-slate-700 flex justify-between">
+<span class="text-white font-medium">Total Investment</span>
+<span class="text-white font-medium">£40M</span>
+</div>
+</div>
+</div>
+<div class="bg-slate-900 p-5 rounded-lg">
+<h3 class="text-lg font-semibold mb-4 text-white">Funding Sources</h3>
+<ul class="space-y-2 text-slate-300">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-money-dollar-circle-line"></i>
+</div>
+<span>Internal capital allocation from global EV fund (£28M)</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-money-dollar-circle-line"></i>
+</div>
+<span>Indian government EV incentives (£7M)</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-money-dollar-circle-line"></i>
+</div>
+<span>Strategic partner co-investment (£5M)</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="bg-slate-800 rounded-lg p-6 mb-8">
+<h2 class="text-2xl font-bold mb-6 text-white">Key Stakeholders</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="text-xl font-semibold mb-4 text-white">Internal Teams</h3>
+<div class="space-y-4">
+<div class="bg-slate-900 p-4 rounded-lg">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-500/20 text-primary rounded-lg mr-3">
+<i class="ri-team-line"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-white">Product Development Team</h4>
+<p class="text-slate-400">Led by Rajesh Sharma, Chief Product Officer</p>
+<p class="text-slate-300 mt-1">Responsible for vehicle design, specifications, and feature set adaptation for Indian market.</p>
+</div>
+</div>
+</div>
+<div class="bg-slate-900 p-4 rounded-lg">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-500/20 text-primary rounded-lg mr-3">
+<i class="ri-tools-line"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-white">Manufacturing Team</h4>
+<p class="text-slate-400">Led by Anita Patel, VP of Operations</p>
+<p class="text-slate-300 mt-1">Responsible for production line setup, quality control, and supply chain integration.</p>
+</div>
+</div>
+</div>
+<div class="bg-slate-900 p-4 rounded-lg">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-500/20 text-primary rounded-lg mr-3">
+<i class="ri-advertisement-line"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-white">Marketing Team</h4>
+<p class="text-slate-400">Led by Vikram Mehta, CMO</p>
+<p class="text-slate-300 mt-1">Responsible for brand positioning, launch strategy, and customer education campaigns.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-4 text-white">External Partners</h3>
+<div class="space-y-4">
+<div class="bg-slate-900 p-4 rounded-lg">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-500/20 text-primary rounded-lg mr-3">
+<i class="ri-battery-2-charge-line"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-white">LG Energy Solution</h4>
+<p class="text-slate-400">Battery Technology Partner</p>
+<p class="text-slate-300 mt-1">Providing battery cells and technical expertise for India-specific requirements.</p>
+</div>
+</div>
+</div>
+<div class="bg-slate-900 p-4 rounded-lg">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-500/20 text-primary rounded-lg mr-3">
+<i class="ri-government-line"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-white">Ministry of Heavy Industries</h4>
+<p class="text-slate-400">Regulatory Partner</p>
+<p class="text-slate-300 mt-1">Providing FAME II subsidies and regulatory guidance for EV production.</p>
+</div>
+</div>
+</div>
+<div class="bg-slate-900 p-4 rounded-lg">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-500/20 text-primary rounded-lg mr-3">
+<i class="ri-store-2-line"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-white">Dealer Network</h4>
+<p class="text-slate-400">Distribution Partners</p>
+<p class="text-slate-300 mt-1">20 premium dealers selected for initial EV showroom implementation.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<h3 class="text-xl font-semibold mb-4 text-white">Communication Matrix</h3>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-slate-700">
+<th class="p-4 text-white">Stakeholder</th>
+<th class="p-4 text-white">Communication Channel</th>
+<th class="p-4 text-white">Frequency</th>
+<th class="p-4 text-white">Key Information</th>
+<th class="p-4 text-white">Responsible</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-700">
+<tr class="bg-slate-900">
+<td class="p-4 text-white">Executive Team</td>
+<td class="p-4 text-slate-300">Board Meetings</td>
+<td class="p-4 text-slate-300">Monthly</td>
+<td class="p-4 text-slate-300">Strategic progress, financial updates</td>
+<td class="p-4 text-slate-300">Project Director</td>
+</tr>
+<tr class="bg-slate-900">
+<td class="p-4 text-white">Internal Teams</td>
+<td class="p-4 text-slate-300">Project Management Tool</td>
+<td class="p-4 text-slate-300">Weekly</td>
+<td class="p-4 text-slate-300">Milestone updates, challenges</td>
+<td class="p-4 text-slate-300">Team Leads</td>
+</tr>
+<tr class="bg-slate-900">
+<td class="p-4 text-white">External Partners</td>
+<td class="p-4 text-slate-300">Joint Review Meetings</td>
+<td class="p-4 text-slate-300">Bi-weekly</td>
+<td class="p-4 text-slate-300">Integration points, deliverables</td>
+<td class="p-4 text-slate-300">Partnership Manager</td>
+</tr>
+<tr class="bg-slate-900">
+<td class="p-4 text-white">Dealers</td>
+<td class="p-4 text-slate-300">Dealer Portal</td>
+<td class="p-4 text-slate-300">Monthly</td>
+<td class="p-4 text-slate-300">Training materials, launch timeline</td>
+<td class="p-4 text-slate-300">Sales Director</td>
+</tr>
+<tr class="bg-slate-900">
+<td class="p-4 text-white">Government</td>
+<td class="p-4 text-slate-300">Formal Correspondence</td>
+<td class="p-4 text-slate-300">Quarterly</td>
+<td class="p-4 text-slate-300">Compliance updates, incentive claims</td>
+<td class="p-4 text-slate-300">Regulatory Affairs</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="bg-slate-800 rounded-lg p-6 mb-8">
+<h2 class="text-2xl font-bold mb-6 text-white">Risk Assessment</h2>
+<div class="chart-container" id="riskMatrixChart"></div>
+
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="text-xl font-semibold mb-4 text-white">Key Risks & Mitigation Strategies</h3>
+<div class="space-y-6">
+<div class="bg-red-500/10 p-4 rounded-lg">
+<h4 class="text-lg font-medium mb-2 text-red-400">Supply Chain Disruptions</h4>
+<p class="text-slate-300 mb-2">Risk of battery and semiconductor shortages affecting production timeline.</p>
+<div class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-red-400 mr-2 mt-0.5">
+<i class="ri-shield-check-line"></i>
+</div>
+<span class="text-slate-300">Secure long-term supply contracts with multiple vendors and maintain 3-month component buffer.</span>
+</div>
+</div>
+<div class="bg-yellow-500/10 p-4 rounded-lg">
+<h4 class="text-lg font-medium mb-2 text-yellow-400">Pricing Pressure</h4>
+<p class="text-slate-300 mb-2">Competitive pricing from domestic manufacturers may force margin reduction.</p>
+<div class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-yellow-400 mr-2 mt-0.5">
+<i class="ri-shield-check-line"></i>
+</div>
+<span class="text-slate-300">Emphasize premium features and total cost of ownership advantages; develop flexible pricing tiers.</span>
+</div>
+</div>
+<div class="bg-blue-500/10 p-4 rounded-lg">
+<h4 class="text-lg font-medium mb-2 text-blue-400">Regulatory Changes</h4>
+<p class="text-slate-300 mb-2">Potential reduction in government subsidies affecting market demand.</p>
+<div class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-blue-400 mr-2 mt-0.5">
+<i class="ri-shield-check-line"></i>
+</div>
+<span class="text-slate-300">Maintain active engagement with policy makers and develop pricing models that reduce dependency on subsidies.</span>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-4 text-white">Contingency Plans</h3>
+<div class="space-y-4">
+<div class="bg-slate-900 p-4 rounded-lg">
+<h4 class="text-lg font-medium mb-2 text-white">Production Delays</h4>
+<ul class="space-y-2 text-slate-300">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-arrow-right-line"></i>
+</div>
+<span>Phased launch approach starting with limited editions</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-arrow-right-line"></i>
+</div>
+<span>Temporary CKD (Completely Knocked Down) import strategy</span>
+</li>
+</ul>
+</div>
+<div class="bg-slate-900 p-4 rounded-lg">
+<h4 class="text-lg font-medium mb-2 text-white">Lower Than Expected Demand</h4>
+<ul class="space-y-2 text-slate-300">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-arrow-right-line"></i>
+</div>
+<span>Enhanced financing options and lease programs</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-arrow-right-line"></i>
+</div>
+<span>Reallocation of production capacity to export markets</span>
+</li>
+</ul>
+</div>
+<div class="bg-slate-900 p-4 rounded-lg">
+<h4 class="text-lg font-medium mb-2 text-white">Technical Issues Post-Launch</h4>
+<ul class="space-y-2 text-slate-300">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-arrow-right-line"></i>
+</div>
+<span>Rapid response service team in major cities</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-arrow-right-line"></i>
+</div>
+<span>Over-the-air update capability for software issues</span>
+</li>
+</ul>
+</div>
+</div>
+
+<h3 class="text-xl font-semibold mt-6 mb-4 text-white">Monitoring Metrics</h3>
+<div class="bg-slate-900 p-4 rounded-lg">
+<ul class="space-y-2 text-slate-300">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-dashboard-line"></i>
+</div>
+<span>Weekly supply chain health dashboard</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-dashboard-line"></i>
+</div>
+<span>Monthly competitive pricing analysis</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-dashboard-line"></i>
+</div>
+<span>Quarterly regulatory environment assessment</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-dashboard-line"></i>
+</div>
+<span>Pre-launch customer sentiment tracking</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="bg-slate-800 rounded-lg p-6">
+<h2 class="text-2xl font-bold mb-6 text-white">Expected Outcomes</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+<div class="bg-slate-900 p-5 rounded-lg">
+<div class="w-12 h-12 flex items-center justify-center bg-blue-500/20 text-primary rounded-lg mb-4">
+<i class="ri-car-line ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3 text-white">Sales Targets</h3>
+<div class="text-3xl font-bold text-white mb-2">18,500</div>
+<p class="text-slate-400 mb-4">Units in first year</p>
+<ul class="space-y-2 text-slate-300">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-arrow-right-line"></i>
+</div>
+<span>12,000 Standard Range units</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-arrow-right-line"></i>
+</div>
+<span>6,500 Long Range units</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-arrow-right-line"></i>
+</div>
+<span>35% year-on-year growth</span>
+</li>
+</ul>
+</div>
+<div class="bg-slate-900 p-5 rounded-lg">
+<div class="w-12 h-12 flex items-center justify-center bg-blue-500/20 text-primary rounded-lg mb-4">
+<i class="ri-pie-chart-line ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3 text-white">Market Impact</h3>
+<div class="text-3xl font-bold text-white mb-2">15%</div>
+<p class="text-slate-400 mb-4">Premium EV market share</p>
+<ul class="space-y-2 text-slate-300">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-arrow-right-line"></i>
+</div>
+<span>Increase overall Hyundai EV share to 8%</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-arrow-right-line"></i>
+</div>
+<span>Establish premium brand positioning</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-arrow-right-line"></i>
+</div>
+<span>Create halo effect for entire lineup</span>
+</li>
+</ul>
+</div>
+<div class="bg-slate-900 p-5 rounded-lg">
+<div class="w-12 h-12 flex items-center justify-center bg-blue-500/20 text-primary rounded-lg mb-4">
+<i class="ri-building-line ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3 text-white">Organizational Benefits</h3>
+<div class="text-3xl font-bold text-white mb-2">40%</div>
+<p class="text-slate-400 mb-4">Localization ratio</p>
+<ul class="space-y-2 text-slate-300">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-arrow-right-line"></i>
+</div>
+<span>Enhanced EV manufacturing expertise</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-arrow-right-line"></i>
+</div>
+<span>Upskilled workforce for EV production</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-arrow-right-line"></i>
+</div>
+<span>Strengthened supplier ecosystem</span>
+</li>
+</ul>
+</div>
+</div>
+
+<h3 class="text-xl font-semibold mb-4 text-white">Long-Term Impact</h3>
+<div class="chart-container" id="longTermImpactChart"></div>
+
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="text-xl font-semibold mb-4 text-white">Success Metrics</h3>
+<div class="bg-slate-900 p-5 rounded-lg">
+<ul class="space-y-3 text-slate-300">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span><span class="font-medium text-white">Sales Volume:</span> 18,500 units in Year 1, growing to 45,000 by Year 3</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span><span class="font-medium text-white">Customer Satisfaction:</span> Net Promoter Score > 70</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span><span class="font-medium text-white">Brand Perception:</span> 25% increase in brand consideration for EVs</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span><span class="font-medium text-white">Financial:</span> Break-even by Q3 of Year 2</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span><span class="font-medium text-white">Manufacturing:</span> 40% localization in Year 1, 60% by Year 3</span>
+</li>
+</ul>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-4 text-white">Evaluation Criteria</h3>
+<div class="bg-slate-900 p-5 rounded-lg">
+<ul class="space-y-3 text-slate-300">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-file-list-3-line"></i>
+</div>
+<span><span class="font-medium text-white">Monthly:</span> Sales performance vs. targets, production efficiency metrics</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-file-list-3-line"></i>
+</div>
+<span><span class="font-medium text-white">Quarterly:</span> Market share analysis, customer feedback integration</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-file-list-3-line"></i>
+</div>
+<span><span class="font-medium text-white">Annual:</span> Comprehensive ROI assessment, strategy refinement</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-file-list-3-line"></i>
+</div>
+<span><span class="font-medium text-white">Continuous:</span> Quality metrics, service center performance</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="bg-slate-800 py-12">
+<div class="container mx-auto px-4">
+<div class="bg-slate-900 p-8 rounded-lg">
+<div class="flex flex-col md:flex-row items-center gap-8">
+<div class="md:w-2/3">
+<h2 class="text-2xl font-bold mb-4 text-white">Download Detailed Implementation Plan</h2>
+<p class="text-slate-300 mb-6">Get access to the complete implementation roadmap for the Premium Mid-Segment EV Launch initiative, including detailed timelines, resource allocation, and technical specifications.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="https://readdy.ai/home/2a7a8cfb-9728-47a4-a357-766fd0ecc5c9/3684a90d-9f4f-4459-acf6-b9c6f99b8615" data-readdy="true">
+<button class="bg-primary text-white px-6 py-3 !rounded-button font-medium whitespace-nowrap hover:bg-blue-600 transition-colors w-full">Download PDF</button>
+</a>
+<a href="https://readdy.ai/home/2a7a8cfb-9728-47a4-a357-766fd0ecc5c9/3684a90d-9f4f-4459-acf6-b9c6f99b8615" data-readdy="true">
+<button class="bg-slate-700 text-white px-6 py-3 !rounded-button font-medium whitespace-nowrap hover:bg-slate-600 transition-colors w-full">Return to Strategy Overview</button>
+</a>
+</div>
+</div>
+<div class="md:w-1/3">
+<img src="https://readdy.ai/api/search-image?query=professional%2520business%2520document%2520with%2520charts%2520and%2520graphs%252C%2520showing%2520EV%2520market%2520analysis%252C%2520clean%2520modern%2520design%252C%2520blue%2520color%2520scheme%252C%2520corporate%2520style%252C%2520high%2520quality%2520print%2520material%252C%25203D%2520rendering%2520of%2520report%2520pages&width=400&height=300&seq=3&orientation=landscape" alt="Implementation Plan Document" class="rounded-lg shadow-lg">
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="bg-slate-900 pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="text-2xl font-['Pacifico'] text-white">logo</span>
+<span class="text-lg font-semibold text-white">EV Strategy</span>
+</div>
+<p class="text-slate-400 mb-4">Comprehensive strategic analysis and implementation roadmap for Hyundai Motor India's electric vehicle market expansion.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-slate-800 text-slate-300 rounded-full hover:bg-primary hover:text-white transition-colors">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-slate-800 text-slate-300 rounded-full hover:bg-primary hover:text-white transition-colors">
+<i class="ri-twitter-x-fill"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-slate-800 text-slate-300 rounded-full hover:bg-primary hover:text-white transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-slate-800 text-slate-300 rounded-full hover:bg-primary hover:text-white transition-colors">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+<ul class="space-y-2 text-slate-400">
+<li><a href="#" class="hover:text-primary transition-colors">Executive Summary</a></li>
+<li><a href="#" class="hover:text-primary transition-colors">Market Analysis</a></li>
+<li><a href="#" class="hover:text-primary transition-colors">Implementation Plan</a></li>
+<li><a href="#" class="hover:text-primary transition-colors">Timeline</a></li>
+<li><a href="#" class="hover:text-primary transition-colors">Budget</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold text-white mb-4">Related Priorities</h4>
+<ul class="space-y-2 text-slate-400">
+<li><a href="https://readdy.ai/home/2a7a8cfb-9728-47a4-a357-766fd0ecc5c9/3684a90d-9f4f-4459-acf6-b9c6f99b8615" data-readdy="true" class="hover:text-primary transition-colors">Battery Partnerships</a></li>
+<li><a href="https://readdy.ai/home/2a7a8cfb-9728-47a4-a357-766fd0ecc5c9/3684a90d-9f4f-4459-acf6-b9c6f99b8615" data-readdy="true" class="hover:text-primary transition-colors">ICE Model Conversion</a></li>
+<li><a href="https://readdy.ai/home/2a7a8cfb-9728-47a4-a357-766fd0ecc5c9/3684a90d-9f4f-4459-acf6-b9c6f99b8615" data-readdy="true" class="hover:text-primary transition-colors">Dedicated EV Showrooms</a></li>
+<li><a href="https://readdy.ai/home/2a7a8cfb-9728-47a4-a357-766fd0ecc5c9/3684a90d-9f4f-4459-acf6-b9c6f99b8615" data-readdy="true" class="hover:text-primary transition-colors">Celebrity-Led Campaigns</a></li>
+<li><a href="https://readdy.ai/home/2a7a8cfb-9728-47a4-a357-766fd0ecc5c9/3684a90d-9f4f-4459-acf6-b9c6f99b8615" data-readdy="true" class="hover:text-primary transition-colors">Main Strategy Overview</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold text-white mb-4">Contact Us</h4>
+<ul class="space-y-2 text-slate-400">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-mail-line"></i>
+</div>
+<span>contact@evstrategy.com</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-phone-line"></i>
+</div>
+<span>+91 98765 43210</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-map-pin-line"></i>
+</div>
+<span>123 Business Avenue, New Delhi, India</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-800 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-slate-500 mb-4 md:mb-0">© 2025 EV Strategy Consulting. All rights reserved.</p>
+<div class="flex space-x-6 text-slate-500">
+<a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+<a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+<a href="#" class="hover:text-primary transition-colors">Cookie Policy</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Market Size Chart
+  const marketSizeChart = echarts.init(document.getElementById('marketSizeChart'));
+  const marketSizeOption = {
+    animation: false,
+    tooltip: {
+      trigger: 'axis',
+      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      textStyle: {
+        color: '#1f2937'
+      }
+    },
+    legend: {
+      data: ['Total EV Market', 'Premium Mid-Segment'],
+      textStyle: {
+        color: '#e2e8f0'
+      }
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: {
+      type: 'category',
+      data: ['2023', '2024', '2025', '2026', '2027', '2028'],
+      axisLine: {
+        lineStyle: {
+          color: '#4b5563'
+        }
+      },
+      axisLabel: {
+        color: '#9ca3af'
+      }
+    },
+    yAxis: {
+      type: 'value',
+      name: 'Units (Thousands)',
+      nameTextStyle: {
+        color: '#9ca3af'
+      },
+      axisLine: {
+        lineStyle: {
+          color: '#4b5563'
+        }
+      },
+      axisLabel: {
+        color: '#9ca3af'
+      },
+      splitLine: {
+        lineStyle: {
+          color: '#374151'
+        }
+      }
+    },
+    series: [
+      {
+        name: 'Total EV Market',
+        type: 'line',
+        data: [120, 180, 270, 400, 580, 820],
+        symbol: 'none',
+        smooth: true,
+        lineStyle: {
+          width: 3,
+          color: 'rgba(87, 181, 231, 1)'
+        },
+        areaStyle: {
+          color: {
+            type: 'linear',
+            x: 0,
+            y: 0,
+            x2: 0,
+            y2: 1,
+            colorStops: [{
+              offset: 0,
+              color: 'rgba(87, 181, 231, 0.2)'
+            }, {
+              offset: 1,
+              color: 'rgba(87, 181, 231, 0.05)'
+            }]
+          }
+        }
+      },
+      {
+        name: 'Premium Mid-Segment',
+        type: 'line',
+        data: [25, 45, 80, 130, 210, 320],
+        symbol: 'none',
+        smooth: true,
+        lineStyle: {
+          width: 3,
+          color: 'rgba(141, 211, 199, 1)'
+        },
+        areaStyle: {
+          color: {
+            type: 'linear',
+            x: 0,
+            y: 0,
+            x2: 0,
+            y2: 1,
+            colorStops: [{
+              offset: 0,
+              color: 'rgba(141, 211, 199, 0.2)'
+            }, {
+              offset: 1,
+              color: 'rgba(141, 211, 199, 0.05)'
+            }]
+          }
+        }
+      }
+    ]
+  };
+  marketSizeChart.setOption(marketSizeOption);
+
+  // Competitor Chart
+  const competitorChart = echarts.init(document.getElementById('competitorChart'));
+  const competitorOption = {
+    animation: false,
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        type: 'shadow'
+      },
+      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      textStyle: {
+        color: '#1f2937'
+      }
+    },
+    legend: {
+      data: ['Current', 'Projected (2025)'],
+      textStyle: {
+        color: '#e2e8f0'
+      }
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: {
+      type: 'value',
+      name: 'Market Share (%)',
+      nameTextStyle: {
+        color: '#9ca3af'
+      },
+      axisLine: {
+        lineStyle: {
+          color: '#4b5563'
+        }
+      },
+      axisLabel: {
+        color: '#9ca3af'
+      },
+      splitLine: {
+        lineStyle: {
+          color: '#374151'
+        }
+      }
+    },
+    yAxis: {
+      type: 'category',
+      data: ['Tata Motors', 'Mahindra', 'MG', 'Hyundai', 'BYD', 'Others'],
+      axisLine: {
+        lineStyle: {
+          color: '#4b5563'
+        }
+      },
+      axisLabel: {
+        color: '#9ca3af'
+      }
+    },
+    series: [
+      {
+        name: 'Current',
+        type: 'bar',
+        data: [74, 7, 13, 1.9, 2.1, 2],
+        itemStyle: {
+          color: 'rgba(87, 181, 231, 1)'
+        }
+      },
+      {
+        name: 'Projected (2025)',
+        type: 'bar',
+        data: [58, 12, 10, 15, 3, 2],
+        itemStyle: {
+          color: 'rgba(251, 191, 114, 1)'
+        }
+      }
+    ]
+  };
+  competitorChart.setOption(competitorOption);
+
+  // Growth Projection Chart
+  const growthProjectionChart = echarts.init(document.getElementById('growthProjectionChart'));
+  const growthProjectionOption = {
+    animation: false,
+    tooltip: {
+      trigger: 'item',
+      formatter: '{b}: {c}%',
+      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      textStyle: {
+        color: '#1f2937'
+      }
+    },
+    series: [
+      {
+        name: 'Growth Projection',
+        type: 'pie',
+        radius: ['50%', '70%'],
+        center: ['50%', '50%'],
+        avoidLabelOverlap: false,
+        itemStyle: {
+          borderRadius: 10,
+          borderColor: '#1e293b',
+          borderWidth: 2
+        },
+        label: {
+          show: true,
+          position: 'outside',
+          formatter: '{b}: {c}%',
+          color: '#e2e8f0'
+        },
+        labelLine: {
+          show: true,
+          lineStyle: {
+            color: '#64748b'
+          }
+        },
+        data: [
+          {value: 15, name: '2025'},
+          {value: 22, name: '2026'},
+          {value: 28, name: '2027'},
+          {value: 35, name: '2028'}
+        ],
+        color: [
+          'rgba(87, 181, 231, 1)',
+          'rgba(141, 211, 199, 1)',
+          'rgba(251, 191, 114, 1)',
+          'rgba(252, 141, 98, 1)'
+        ]
+      }
+    ]
+  };
+  growthProjectionChart.setOption(growthProjectionOption);
+
+  // Gantt Chart
+  const ganttChart = echarts.init(document.getElementById('ganttChart'));
+  const ganttOption = {
+    animation: false,
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        type: 'shadow'
+      },
+      formatter: function(params) {
+        var tar = params[0];
+        return tar.name + ': ' + tar.value[3] + ' - ' + tar.value[4];
+      },
+      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      textStyle: {
+        color: '#1f2937'
+      }
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: {
+      type: 'time',
+      min: new Date('2024-04-01'),
+      max: new Date('2025-06-30'),
+      axisLine: {
+        lineStyle: {
+          color: '#4b5563'
+        }
+      },
+      axisLabel: {
+        color: '#9ca3af',
+        formatter: '{MM}/{yy}'
+      },
+      splitLine: {
+        lineStyle: {
+          color: '#374151'
+        }
+      }
+    },
+    yAxis: {
+      type: 'category',
+      data: ['Launch Event', 'Marketing Campaign', 'Dealer Training', 'Production Setup', 'Testing & Validation', 'Design Finalization', 'Concept Development'],
+      axisLine: {
+        lineStyle: {
+          color: '#4b5563'
+        }
+      },
+      axisLabel: {
+        color: '#9ca3af'
+      }
+    },
+    series: [
+      {
+        type: 'custom',
+        renderItem: function(params, api) {
+          var categoryIndex = api.value(0);
+          var start = api.coord([api.value(1), categoryIndex]);
+          var end = api.coord([api.value(2), categoryIndex]);
+          var height = api.size([0, 1])[1] * 0.6;
+          
+          var rectShape = echarts.graphic.clipRectByRect(
+            {
+              x: start[0],
+              y: start[1] - height / 2,
+              width: end[0] - start[0],
+              height: height
+            },
+            {
+              x: params.coordSys.x,
+              y: params.coordSys.y,
+              width: params.coordSys.width,
+              height: params.coordSys.height
+            }
+          );
+          
+          var progress = api.value(5);
+          var progressWidth = (end[0] - start[0]) * progress;
+          
+          var group = {
+            type: 'group',
+            children: [
+              {
+                type: 'rect',
+                shape: rectShape,
+                style: {
+                  fill: 'rgba(87, 181, 231, 0.3)',
+                  stroke: 'rgba(87, 181, 231, 1)'
+                }
+              },
+              {
+                type: 'rect',
+                shape: {
+                  x: start[0],
+                  y: start[1] - height / 2,
+                  width: progressWidth,
+                  height: height
+                },
+                style: {
+                  fill: 'rgba(87, 181, 231, 1)'
+                }
+              }
+            ]
+          };
+          
+          return group;
+        },
+        dimensions: [
+          'categoryIndex',
+          'start',
+          'end',
+          'startDate',
+          'endDate',
+          'progress'
+        ],
+        encode: {
+          x: [1, 2],
+          y: 0
+        },
+        data: [
+          [0, new Date('2025-04-01'), new Date('2025-04-30'), 'Apr 2025', 'Apr 2025', 0],
+          [1, new Date('2025-01-01'), new Date('2025-04-30'), 'Jan 2025', 'Apr 2025', 0.2],
+          [2, new Date('2024-12-01'), new Date('2025-03-31'), 'Dec 2024', 'Mar 2025', 0.3],
+          [3, new Date('2024-07-01'), new Date('2025-01-31'), 'Jul 2024', 'Jan 2025', 0.65],
+          [4, new Date('2024-09-01'), new Date('2025-01-15'), 'Sep 2024', 'Jan 2025', 0.4],
+          [5, new Date('2024-04-01'), new Date('2024-07-31'), 'Apr 2024', 'Jul 2024', 1],
+          [6, new Date('2024-01-01'), new Date('2024-04-30'), 'Jan 2024', 'Apr 2024', 1]
+        ]
+      }
+    ]
+  };
+  ganttChart.setOption(ganttOption);
+
+  // Budget Chart
+  const budgetChart = echarts.init(document.getElementById('budgetChart'));
+  const budgetOption = {
+    animation: false,
+    tooltip: {
+      trigger: 'item',
+      formatter: '{b}: £{c}M ({d}%)',
+      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      textStyle: {
+        color: '#1f2937'
+      }
+    },
+    series: [
+      {
+        name: 'Budget Allocation',
+        type: 'pie',
+        radius: '70%',
+        center: ['50%', '50%'],
+        data: [
+          {value: 14.5, name: 'Product Development'},
+          {value: 12, name: 'Manufacturing Setup'},
+          {value: 6.5, name: 'Marketing & Launch'},
+          {value: 3, name: 'Training & Development'},
+          {value: 4, name: 'Contingency'}
+        ],
+        itemStyle: {
+          borderRadius: 8,
+          borderColor: '#1e293b',
+          borderWidth: 2
+        },
+        color: [
+          'rgba(87, 181, 231, 1)',
+          'rgba(141, 211, 199, 1)',
+          'rgba(251, 191, 114, 1)',
+          'rgba(252, 141, 98, 1)',
+          'rgba(188, 128, 189, 1)'
+        ],
+        label: {
+          color: '#e2e8f0'
+        },
+        labelLine: {
+          lineStyle: {
+            color: '#64748b'
+          }
+        }
+      }
+    ]
+  };
+  budgetChart.setOption(budgetOption);
+
+  // Risk Matrix Chart
+  const riskMatrixChart = echarts.init(document.getElementById('riskMatrixChart'));
+  const riskMatrixOption = {
+    animation: false,
+    grid: {
+      left: '3%',
+      right: '7%',
+      bottom: '10%',
+      top: '10%',
+      containLabel: true
+    },
+    xAxis: {
+      type: 'value',
+      name: 'Impact',
+      min: 0,
+      max: 10,
+      nameTextStyle: {
+        color: '#9ca3af'
+      },
+      axisLine: {
+        lineStyle: {
+          color: '#4b5563'
+        }
+      },
+      axisLabel: {
+        color: '#9ca3af'
+      },
+      splitLine: {
+        lineStyle: {
+          color: '#374151'
+        }
+      }
+    },
+    yAxis: {
+      type: 'value',
+      name: 'Probability',
+      min: 0,
+      max: 10,
+      nameTextStyle: {
+        color: '#9ca3af'
+      },
+      axisLine: {
+        lineStyle: {
+          color: '#4b5563'
+        }
+      },
+      axisLabel: {
+        color: '#9ca3af'
+      },
+      splitLine: {
+        lineStyle: {
+          color: '#374151'
+        }
+      }
+    },
+    series: [
+      {
+        type: 'scatter',
+        data: [
+          [8, 7, 'Supply Chain Disruptions', 25],
+          [7, 5, 'Pricing Pressure', 20],
+          [6, 4, 'Regulatory Changes', 18],
+          [5, 3, 'Technical Issues', 15],
+          [4, 6, 'Market Acceptance', 17],
+          [3, 2, 'Talent Shortage', 10]
+        ],
+        symbolSize: function (data) {
+          return data[3] * 1.2;
+        },
+        itemStyle: {
+          color: function(params) {
+            const x = params.data[0]; // Impact
+            const y = params.data[1]; // Probability
+            const risk = x * y;
+            
+            if (risk > 40) return 'rgba(252, 141, 98, 1)'; // High risk
+            if (risk > 20) return 'rgba(251, 191, 114, 1)'; // Medium risk
+            return 'rgba(141, 211, 199, 1)'; // Low risk
+          }
+        },
+        label: {
+          show: true,
+          formatter: function (param) {
+            return param.data[2];
+          },
+          position: 'top',
+          color: '#e2e8f0'
+        },
+        emphasis: {
+          label: {
+            show: true
+          }
+        }
+      },
+      {
+        type: 'line',
+        markLine: {
+          silent: true,
+          lineStyle: {
+            color: '#4b5563',
+            type: 'dashed'
+          },
+          data: [
+            {xAxis: 5},
+            {yAxis: 5}
+          ]
+        }
+      }
+    ],
+    tooltip: {
+      formatter: function (param) {
+        return param.data[2] + '<br/>Impact: ' + param.data[0] + '<br/>Probability: ' + param.data[1] + '<br/>Risk Score: ' + (param.data[0] * param.data[1]);
+      },
+      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      textStyle: {
+        color: '#1f2937'
+      }
+    }
+  };
+  riskMatrixChart.setOption(riskMatrixOption);
+
+  // Long Term Impact Chart
+  const longTermImpactChart = echarts.init(document.getElementById('longTermImpactChart'));
+  const longTermImpactOption = {
+    animation: false,
+    tooltip: {
+      trigger: 'axis',
+      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      textStyle: {
+        color: '#1f2937'
+      }
+    },
+    legend: {
+      data: ['EV Market Share', 'Revenue (£M)', 'Localization (%)'],
+      textStyle: {
+        color: '#e2e8f0'
+      }
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: {
+      type: 'category',
+      data: ['2025', '2026', '2027', '2028', '2029', '2030'],
+      axisLine: {
+        lineStyle: {
+          color: '#4b5563'
+        }
+      },
+      axisLabel: {
+        color: '#9ca3af'
+      }
+    },
+    yAxis: [
+      {
+        type: 'value',
+        name: 'Percentage',
+        min: 0,
+        max: 100,
+        nameTextStyle: {
+          color: '#9ca3af'
+        },
+        axisLine: {
+          lineStyle: {
+            color: '#4b5563'
+          }
+        },
+        axisLabel: {
+          color: '#9ca3af',
+          formatter: '{value}%'
+        },
+        splitLine: {
+          lineStyle: {
+            color: '#374151'
+          }
+        }
+      },
+      {
+        type: 'value',
+        name: 'Revenue (£M)',
+        min: 0,
+        max: 500,
+        nameTextStyle: {
+          color: '#9ca3af'
+        },
+        axisLine: {
+          lineStyle: {
+            color: '#4b5563'
+          }
+        },
+        axisLabel: {
+          color: '#9ca3af'
+        },
+        splitLine: {
+          show: false
+        }
+      }
+    ],
+    series: [
+      {
+        name: 'EV Market Share',
+        type: 'line',
+        data: [15, 22, 28, 35, 40, 45],
+        symbol: 'circle',
+        symbolSize: 8,
+        itemStyle: {
+          color: 'rgba(87, 181, 231, 1)'
+        },
+        lineStyle: {
+          width: 3,
+          color: 'rgba(87, 181, 231, 1)'
+        }
+      },
+      {
+        name: 'Localization (%)',
+        type: 'line',
+        data: [40, 50, 60, 65, 70, 75],
+        symbol: 'circle',
+        symbolSize: 8,
+        itemStyle: {
+          color: 'rgba(141, 211, 199, 1)'
+        },
+        lineStyle: {
+          width: 3,
+          color: 'rgba(141, 211, 199, 1)'
+        }
+      },
+      {
+        name: 'Revenue (£M)',
+        type: 'bar',
+        yAxisIndex: 1,
+        data: [80, 150, 220, 300, 380, 450],
+        itemStyle: {
+          color: 'rgba(251, 191, 114, 1)'
+        },
+        barWidth: '20%'
+      }
+    ]
+  };
+  longTermImpactChart.setOption(longTermImpactOption);
+
+  // Resize charts when window is resized
+  window.addEventListener('resize', function() {
+    const charts = [
+      'marketSizeChart', 'competitorChart', 'growthProjectionChart', 'ganttChart',
+      'budgetChart', 'riskMatrixChart', 'longTermImpactChart'
+    ];
+    charts.forEach(chartId => {
+      const chart = echarts.getInstanceByDom(document.getElementById(chartId));
+      if (chart) {
+        chart.resize();
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
